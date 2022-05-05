@@ -1,0 +1,5 @@
+@media (min-width: 75rem) {
+  #whoiam div.content {
+    width: 50%;
+  }
+}

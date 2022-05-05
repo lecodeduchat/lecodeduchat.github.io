@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.content {
+  margin: 0 20px;
+}
+
+/** header **************************************************************/
+header {
+  background-color: rgb(224, 135, 224);
+}
+header div.content {
+  display: flex;
+}
+h1 {
+  width: 80%;
+}
+nav.menu {
+  width: 20%;
+  text-align: right;
+}
+ul.menu {
+  list-style: none;
+}
+li.menu-item {
+  text-align: left;
+  line-height: 25px;
+  width: 150px;
+  height: 25px;
+  background-color: yellow;
+}
+#whoiam {
+  background-color: aqua;
+}
+/** skills **************************************************************/
