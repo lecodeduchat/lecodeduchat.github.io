@@ -1,27 +1,71 @@
+/** variables du thème *************************************************/
+:root {
+  --darkcolor: #18020c;
+  --color-bg-dark: rgba(24, 2, 12, 0.5);
+  --lightcolor: #f2f3d9;
+  --md-1-color: #576066;
+  --md-2-color: #c16e70;
+  --md-3-color: #dc9e82;
+  --sp: 16px;
+}
+@font-face {
+  font-family: "Merienda";
+  src: url("/assets/fonts/Merienda-Regular.ttf");
+}
+@font-face {
+  font-family: "Merienda";
+  font-style: bold;
+  src: url("/assets/fonts/Merienda-Bold.ttf");
+}
+/** global **************************************************************/
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Open sans, Arial, Helvetica, sans-serif;
+  height: 100%;
 }
 div.content {
   margin: 0 20px;
 }
+.hidden {
+  display: none;
+}
 
 /** header **************************************************************/
 header {
-  background-color: rgb(224, 135, 224);
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--darkcolor);
+  height: 50px;
+  z-index: 1000;
 }
 header div.content {
   display: flex;
 }
 h1 {
   width: 80%;
+  color: white;
+  line-height: 48px;
+}
+h1 span {
+  font-family: "Merienda";
+  font-style: normal;
+  font-size: 19.5px;
+  font-weight: bold;
 }
 nav.menu {
   width: 20%;
   text-align: right;
+}
+.menu-burger span {
+  color: white;
+  width: 20px;
+  height: 20px;
+  line-height: 48px;
 }
 ul.menu {
   list-style: none;
@@ -31,9 +75,37 @@ li.menu-item {
   line-height: 25px;
   width: 150px;
   height: 25px;
-  background-color: yellow;
+  background-color: white;
 }
 #whoiam {
-  background-color: aqua;
+  background-color: var(--md-1-color);
+  color: white;
+  height: 100%;
+  margin-top: 100px;
 }
-/** skills **************************************************************/
+h2 {
+  font-family: Merienda;
+  font-size: 24px;
+  margin: 0px 0px var(--sp);
+}
+p.myname {
+  font-size: 22px;
+  margin: 0px 0px var(--sp);
+}
+#whoiam img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  bottom: 0px;
+  right: 0px;
+  overflow-x: hidden;
+  z-index: 0;
+}
+div.whoiam.content {
+  background-color: var(--color-bg-dark);
+  backdrop-filter: blur(10px);
+  position: relative;
+  line-height: 1.5;
+  padding: var(--sp);
+}
+/** skills **************************************************************/ ;
