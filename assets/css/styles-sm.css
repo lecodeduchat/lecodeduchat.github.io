@@ -1,0 +1,8 @@
+@media (min-width: 36rem) {
+  h1 {
+    color: yellow;
+  }
+  #skills {
+    background-color: yellow;
+  }
+}

@@ -27,11 +27,23 @@ body {
   font-family: Open sans, Arial, Helvetica, sans-serif;
   height: 100%;
 }
-div.content {
-  margin: 0 20px;
+.block {
+  position: relative;
+}
+.content {
+  margin: 0 var(--sp);
 }
 .hidden {
   display: none;
+}
+h2 {
+  font-family: Merienda;
+  font-size: 24px;
+  margin: 0px 0px var(--sp);
+}
+p {
+  line-height: 1.8;
+  padding-bottom: var(--sp);
 }
 
 /** header **************************************************************/
@@ -77,35 +89,46 @@ li.menu-item {
   height: 25px;
   background-color: white;
 }
+
+/** WHO I AM ***************************************************************/
 #whoiam {
+  padding: 100px 0px;
   background-color: var(--md-1-color);
   color: white;
   height: 100%;
-  margin-top: 100px;
 }
-h2 {
-  font-family: Merienda;
-  font-size: 24px;
-  margin: 0px 0px var(--sp);
-}
+
 p.myname {
   font-size: 22px;
   margin: 0px 0px var(--sp);
+}
+p.myname span {
+  font-family: Merienda;
 }
 #whoiam img {
   position: absolute;
   height: 100%;
   width: auto;
-  bottom: 0px;
+  vertical-align: middle;
+  top: 0px;
   right: 0px;
   overflow-x: hidden;
+  overflow-y: hidden;
   z-index: 0;
 }
 div.whoiam.content {
   background-color: var(--color-bg-dark);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   position: relative;
   line-height: 1.5;
   padding: var(--sp);
 }
-/** skills **************************************************************/ ;
+/** skills **************************************************************/
+
+#skills {
+  height: 100px;
+  background-color: var(--md-1-color);
+}
+#skills h2 {
+  text-align: center;
+}

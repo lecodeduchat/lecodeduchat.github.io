@@ -36,7 +36,7 @@
   </head>
   <body>
     <header>
-      <div class="content">
+      <div id="main-menu" class="content">
         <h1><span>lecode</span> DUCHAT</h1>
         <nav class="menu">
           <div class="menu-burger"><span class="fa-solid fa-bars"></span></div>
@@ -49,22 +49,50 @@
         </nav>
       </div>
     </header>
-    <div id="whoiam">
-      <img src="/assets/pictures/chat-qui-code__sm.jpg" />
+    <!-- BEGIN WHO I AM ---------------------------------------------------------->
+    <div id="whoiam" class="block">
+      <img
+        src="/assets/pictures/cat-computer__lg.png"
+        srcset="
+          /assets/pictures/chat-qui-code__sm.jpg 480w,
+          /assets/pictures/cat-computer__lg.png  727w
+        "
+        sizes="(max-width:480px) 480px, 100vw"
+        alt="Un chat devant un ordinateur portable"
+      />
       <div class="whoiam content">
         <h2>Bonjour!</h2>
-        <p class="myname">Je m'appelle lecode DUCHAT.</p>
+        <p class="myname">Je m'appelle <span>lecode</span> DUCHAT.</p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum non
           aliquam excepturi dicta quisquam esse nam ipsa possimus quam. Nobis
-          sequi alias totam? Error!
+          sequi alias totam? Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit. Architecto necessitatibus impedit quae dolores tempore. Officiis
+          incidunt consectetur asperiores iusto neque tenetur odit numquam
+          ratione dolores iure dolore aspernatur, ea repellendus velit itaque!
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum non
           aliquam excepturi dicta quisquam esse nam ipsa possimus quam. Nobis
-          sequi alias totam? Error!
+          sequi alias totam?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum non
+          aliquam excepturi dicta quisquam esse nam ipsa possimus quam. Nobis
+          sequi alias totam?
         </p>
       </div>
     </div>
+    <!-- END WHO I AM ------------------------------------------------------------>
+    <!-- BEGIN SKILLS ------------------------------------------------------------>
+    <div id="skills">
+      <div class="skills content">
+        <h2>Mes Compétences</h2>
+        <div class="skill">
+          <span class="fa-solid fa-code"></span>
+        </div>
+      </div>
+    </div>
+    <!-- END SKILLS -------------------------------------------------------------->
   </body>
 </html>

@@ -1,0 +1,20 @@
+@media (min-width: 48rem) {
+  /** HEADER ************************************************/
+  h1 {
+    color: white;
+  }
+
+  /** WHO I AM ***********************************************/
+  #whoiam .content {
+    width: 45%;
+  }
+  #whoiam img {
+    min-height: 800px;
+    width: 100%;
+    vertical-align: middle;
+  }
+  /** SKILLS ************************************************/
+  #skills {
+    background-color: var(--md-2-color);
+  }
+}
