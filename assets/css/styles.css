@@ -39,7 +39,8 @@ body {
 h2 {
   font-family: Merienda;
   font-size: 24px;
-  margin: 0px 0px var(--sp);
+  margin: 0 var(--sp);
+  padding: var(--sp) 0;
   text-align: center;
 }
 h3 {
@@ -50,7 +51,7 @@ p {
   padding-bottom: var(--sp);
 }
 
-/** header **************************************************************/
+/** header ***************************************************************************************/
 header {
   position: fixed;
   top: 0;
@@ -60,12 +61,13 @@ header {
   height: 50px;
   z-index: 1000;
 }
-header div.content {
-  display: flex;
-}
+
 /** MY NAME *********************/
 h1 {
   width: 80%;
+}
+h1 a {
+  text-decoration: none;
   color: white;
   line-height: 48px;
 }
@@ -75,7 +77,7 @@ h1 span {
   font-size: 19.5px;
   font-weight: bold;
 }
-/** MAIN MENU *******************/
+/** NAVIGATION *********************************************************************************/
 .main-menu {
   position: absolute;
   top: 0;
@@ -120,14 +122,27 @@ h1 span {
 }
 .header-main-menu {
   height: 52px;
+  display: flex;
+  line-height: 48px;
+  color: var(--md-1-color);
 }
-.header-main-menu span {
-  width: 20px;
+.header-main-menu .menu-title {
+  flex: 1;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding-left: calc(2 * var(--sp));
+}
+.header-main-menu .menu-cross {
+  flex: 0;
+  flex-basis: 20px;
   text-align: center;
   line-height: 48px;
+  vertical-align: middle;
   padding-right: var(--sp);
 }
 .list-main-menu {
+  width: auto;
   list-style: none;
   padding-bottom: var(--sp);
 }

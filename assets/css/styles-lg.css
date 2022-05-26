@@ -1,5 +1,55 @@
 @media (min-width: 75rem) {
+  /** HEADER *************************************************************************************/
+  h1 {
+    color: lightgreen;
+  }
+  /** NAVIGATION *********************************************************************************/
+  .menu-burger,
+  .btn-menu,
+  .header-main-menu {
+    display: none;
+  }
+  .menu-content {
+    transform: translate(0px);
+    transition: none;
+    min-width: 800px;
+    background-color: var(--darkcolor);
+  }
+  .list-main-menu {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    padding-bottom: 0px;
+  }
+  .main-menu-item {
+    height: calc(70px - (2 * var(--sp)));
+    line-height: calc(70px - (2 * var(--sp)));
+    border-bottom: 0;
+    margin: var(--sp) 0;
+    padding: 0;
+    width: auto;
+    border-right: 1px solid #fff;
+  }
+  .main-menu-item:last-of-type {
+    border-right: 0;
+  }
+  .main-menu-item a {
+    display: inline-block;
+    color: white;
+    font-weight: normal;
+    /* line-height: 38px; */
+    padding: 0 var(--sp);
+  }
+  /** WHO I AM ***********************************************************************************/
+
+  /** SKILLS *************************************************************************************/
   #skills {
     background-color: var(--md-3-color);
   }
+
+  /** EXPERIENCES ********************************************************************************/
+
+  /** HOBBIES ************************************************************************************/
+
+  /** FOOTER *************************************************************************************/
 }
