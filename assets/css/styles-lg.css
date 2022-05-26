@@ -22,8 +22,8 @@
     padding-bottom: 0px;
   }
   .main-menu-item {
-    height: calc(70px - (2 * var(--sp)));
-    line-height: calc(70px - (2 * var(--sp)));
+    height: calc(67px - (2 * var(--sp)));
+    line-height: calc(67px - (2 * var(--sp)));
     border-bottom: 0;
     margin: var(--sp) 0;
     padding: 0;
@@ -43,8 +43,8 @@
   /** WHO I AM ***********************************************************************************/
 
   /** SKILLS *************************************************************************************/
-  #skills {
-    background-color: var(--md-3-color);
+  .skill {
+    width: calc(25% - var(--2sp));
   }
 
   /** EXPERIENCES ********************************************************************************/

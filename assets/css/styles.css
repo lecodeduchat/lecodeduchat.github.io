@@ -7,6 +7,7 @@
   --md-2-color: #c16e70;
   --md-3-color: #dc9e82;
   --sp: 16px;
+  --2sp: 32px;
 }
 @font-face {
   font-family: "Merienda";
@@ -40,11 +41,15 @@ h2 {
   font-family: Merienda;
   font-size: 24px;
   margin: 0 var(--sp);
-  padding: var(--sp) 0;
+  padding: var(--2sp) 0;
   text-align: center;
 }
 h3 {
   text-align: center;
+  padding: var(--sp);
+  font-family: Merienda;
+  font-style: normal;
+  font-weight: bold;
 }
 p {
   line-height: 1.8;
@@ -58,8 +63,25 @@ header {
   left: 0;
   background-color: var(--darkcolor);
   width: 100%;
-  height: 50px;
+  height: 65px;
   z-index: 1000;
+}
+header:before {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-image: linear-gradient(
+    90deg,
+    var(--md-1-color) 0%,
+    var(--md-3-color) 25%,
+    var(--md-3-color) 50%,
+    var(--lightcolor) 75%,
+    var(--md-1-color) 100%
+  );
+  /* transition: 0.2s; */
 }
 
 /** MY NAME *********************/
@@ -67,14 +89,15 @@ h1 {
   width: 80%;
 }
 h1 a {
+  font-size: 26px;
   text-decoration: none;
   color: white;
-  line-height: 48px;
+  line-height: 65px;
 }
 h1 span {
   font-family: "Merienda";
   font-style: normal;
-  font-size: 19.5px;
+  font-size: 19px;
   font-weight: bold;
 }
 /** NAVIGATION *********************************************************************************/
@@ -103,7 +126,7 @@ h1 span {
   color: white;
   width: 20px;
   height: 20px;
-  line-height: 48px;
+  line-height: 65px;
 }
 .menu-content {
   background-color: white;
@@ -200,7 +223,10 @@ div.whoiam.content {
 /** skills **************************************************************/
 
 #skills {
-  background-color: var(--md-2-color);
+  background-color: var(--darkcolor);
+}
+#skills h2 {
+  color: #fff;
 }
 .skills {
   display: inline-flex;
@@ -208,12 +234,44 @@ div.whoiam.content {
   flex-wrap: wrap;
 }
 .skill {
-  width: calc(50% - 32px);
-  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.skill-icon {
+  display: inline-block;
+  font-size: 24px;
+  padding: var(--sp);
+  padding-left: 0;
+  line-height: 19px;
+  vertical-align: middle;
+  color: var(--md-3-color);
+}
+.skill p {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 var(--sp);
 }
 /**  experiences ********************************************************/
 #experiences {
-  background-color: var(--md-1-color);
+  background-color: var(--lightcolor);
+}
+.header-experience {
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+}
+.title-experience,
+.compagny-experience {
+  font-weight: bold;
+}
+.compagny-experience span {
+  font-weight: normal;
+}
+.experience p {
+  border-bottom: 1px solid var(--md-1-color);
+  margin-bottom: var(--2sp);
 }
 /**  hobbies **********************************************************/
 #hobbies {
