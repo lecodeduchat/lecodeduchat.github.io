@@ -4,8 +4,10 @@
     height: 70px;
   }
   h1 {
-    color: aqua;
     line-height: 68px;
+  }
+  h1 a {
+    color: aqua;
   }
   /** NAVIGATION *********************************************************************************/
   .main-menu {
@@ -19,16 +21,22 @@
   }
   .menu-content {
     width: auto;
-    transform: translate(240px);
+    transform: translate(500px);
   }
 
   /** WHO I AM ***********************************************************************************/
-  #whoiam .content {
-    width: 45%;
+
+  #whoiam {
+    padding: 100px 0px;
   }
   #whoiam img {
-    width: 100%;
+    max-height: 100%;
+    width: auto;
     vertical-align: middle;
+    right: 0px;
+  }
+  .whoiam {
+    width: 66%;
   }
 
   /** SKILLS *************************************************************************************/

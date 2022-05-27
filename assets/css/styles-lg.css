@@ -1,15 +1,46 @@
-@media (min-width: 75rem) {
+@media (min-width: 62rem) {
+  section.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #main-header,
+  .whoiam,
+  .skills,
+  .experiences,
+  .hobbies {
+    width: 1280px;
+    margin: auto;
+  }
+
   /** HEADER *************************************************************************************/
   h1 {
+    width: 20%;
+    text-align: left;
+    padding: 0 var(--sp);
+  }
+  h1 a {
     color: lightgreen;
   }
+  #main-header {
+    display: flex;
+    flex-direction: row;
+  }
+
   /** NAVIGATION *********************************************************************************/
   .menu-burger,
   .btn-menu,
   .header-main-menu {
     display: none;
   }
+  .main-menu {
+    position: inherit;
+    width: 80%;
+    height: 70px;
+    padding: 0 var(--sp);
+  }
   .menu-content {
+    position: inherit;
     transform: translate(0px);
     transition: none;
     min-width: 800px;
@@ -41,7 +72,20 @@
     padding: 0 var(--sp);
   }
   /** WHO I AM ***********************************************************************************/
-
+  #whoiam {
+    padding-bottom: 140px;
+  }
+  #whoiam img {
+    /* top: -20px; */
+    max-height: 1355px;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    /* vertical-align: baseline; */
+  }
+  .whoiam article {
+    width: 45%;
+  }
   /** SKILLS *************************************************************************************/
   .skill {
     width: calc(25% - var(--2sp));
