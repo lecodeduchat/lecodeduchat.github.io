@@ -6,6 +6,7 @@
   --md-1-color: #576066;
   --md-2-color: #c16e70;
   --md-3-color: #dc9e82;
+  --color-bg-light: rgba(220, 158, 130, 0.5);
   --sp: 16px;
   --2sp: 32px;
 }
@@ -264,24 +265,105 @@ p.myname span {
 }
 /**  experiences ********************************************************/
 #experiences {
-  background-color: var(--lightcolor);
+  background-color: var(--color-bg-light);
+  padding-bottom: var(--sp);
+}
+.experience {
+  background-color: #fff;
+  padding: var(--2sp);
+  border-radius: 5px;
+  margin-bottom: var(--2sp);
+}
+.tasks {
+  color: var(--md-1-color);
+  font-weight: bold;
 }
 .header-experience {
-  font-size: 1.3rem;
-  line-height: 2.2rem;
+  font-size: 16px;
+  line-height: 2rem;
 }
-.title-experience,
+.header-experience i {
+  padding-right: var(--sp);
+}
 .compagny-experience {
+  font-size: 22px;
   font-weight: bold;
 }
 .compagny-experience span {
   font-weight: normal;
 }
 .experience p {
-  border-bottom: 1px solid var(--md-1-color);
-  margin-bottom: var(--2sp);
+  padding-top: var(--2sp);
+  padding-bottom: 0;
 }
 /**  hobbies **********************************************************/
 #hobbies {
-  background-color: var(--md-3-color);
+  background-color: var(--darkcolor);
+  color: #fff;
+}
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hobby {
+  width: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: var(--2sp);
+}
+.hobby img,
+.name-hobby,
+.text-hobby {
+  margin: auto;
+}
+.hobby img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.name-hobby {
+  font-weight: bold;
+  padding: var(--sp) 0;
+}
+.text-hobby {
+  text-align: center;
+}
+/**  footer **********************************************************/
+footer {
+  background-color: #576066;
+  color: #fff;
+  padding-bottom: var(--2sp);
+}
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#footer h2,
+#footer article {
+  margin: auto;
+}
+.social-media i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  padding: var(--2sp);
+  margin-bottom: var(--2sp);
+}
+.links-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.links-footer span {
+  margin: auto;
+  padding-bottom: var(--sp);
+}
+.links-footer span a {
+  text-decoration: none;
+  color: #fff;
 }
