@@ -53,8 +53,8 @@
     padding-bottom: 0px;
   }
   .main-menu-item {
-    height: calc(67px - (2 * var(--sp)));
-    line-height: calc(67px - (2 * var(--sp)));
+    height: calc(67px - var(--lg-sp));
+    line-height: calc(67px - var(--lg-sp));
     border-bottom: 0;
     margin: var(--sp) 0;
     padding: 0;
@@ -88,7 +88,7 @@
   }
   /** SKILLS *************************************************************************************/
   .skill {
-    width: calc(25% - var(--2sp));
+    width: calc(25% - var(--lg-sp));
   }
 
   /** EXPERIENCES ********************************************************************************/

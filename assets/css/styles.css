@@ -4,11 +4,11 @@
   --color-bg-dark: rgba(24, 2, 12, 0.5);
   --lightcolor: #f2f3d9;
   --md-1-color: #576066;
-  --md-2-color: #c16e70;
-  --md-3-color: #dc9e82;
+  --md-2-color: #bb23be;
+  --md-3-color: #e4626f;
   --color-bg-light: rgba(220, 158, 130, 0.5);
   --sp: 16px;
-  --2sp: 32px;
+  --lg-sp: 32px;
 }
 @font-face {
   font-family: "Merienda";
@@ -16,7 +16,7 @@
 }
 @font-face {
   font-family: "Merienda";
-  font-style: bold;
+  font-weight: bold;
   src: url("/assets/fonts/Merienda-Bold.ttf");
 }
 /** global **************************************************************/
@@ -43,7 +43,7 @@ h2 {
   font-family: Merienda;
   font-size: 24px;
   margin: 0 var(--sp);
-  padding: var(--2sp) 0;
+  padding: var(--lg-sp) 0;
   text-align: center;
 }
 h3 {
@@ -141,7 +141,7 @@ h1 span {
   transform: translate(500px);
   transition-property: transform;
   transition-duration: 0.7s;
-  transition-delay: 0;
+  transition-delay: 0s;
   transition-timing-function: ease-in;
 }
 .btn-menu:checked ~ .menu-content {
@@ -270,12 +270,12 @@ p.myname span {
 }
 .experience {
   background-color: #fff;
-  padding: var(--2sp);
+  padding: var(--lg-sp);
   border-radius: 5px;
-  margin-bottom: var(--2sp);
+  margin-bottom: var(--lg-sp);
 }
 .tasks {
-  color: var(--md-1-color);
+  color: var(--md-2-color);
   font-weight: bold;
 }
 .header-experience {
@@ -293,8 +293,11 @@ p.myname span {
   font-weight: normal;
 }
 .experience p {
-  padding-top: var(--2sp);
+  padding-top: var(--lg-sp);
   padding-bottom: 0;
+}
+.fa-tag::before {
+  transform: rotateY(180deg);
 }
 /**  hobbies **********************************************************/
 #hobbies {
@@ -312,7 +315,7 @@ p.myname span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: var(--2sp);
+  padding-bottom: var(--lg-sp);
 }
 .hobby img,
 .name-hobby,
@@ -325,17 +328,22 @@ p.myname span {
   border-radius: 50%;
 }
 .name-hobby {
+  font-size: 18px;
   font-weight: bold;
-  padding: var(--sp) 0;
+  padding: var(--lg-sp) 0 var(--sp);
 }
 .text-hobby {
   text-align: center;
+}
+.text-hobby a {
+  text-decoration: none;
+  color: #fff;
 }
 /**  footer **********************************************************/
 footer {
   background-color: #576066;
   color: #fff;
-  padding-bottom: var(--2sp);
+  padding-bottom: var(--lg-sp);
 }
 #footer {
   display: flex;
@@ -351,15 +359,16 @@ footer {
   width: 50px;
   height: 50px;
   font-size: 50px;
-  padding: var(--2sp);
-  margin-bottom: var(--2sp);
+  padding: var(--lg-sp);
+  margin-bottom: var(--lg-sp);
 }
 .links-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.links-footer span {
+.links-footer span,
+address {
   margin: auto;
   padding-bottom: var(--sp);
 }

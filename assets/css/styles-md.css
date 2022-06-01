@@ -41,12 +41,12 @@
 
   /** SKILLS *************************************************************************************/
   .skill {
-    width: calc(33% - var(--2sp));
+    width: calc(33% - var(--lg-sp));
   }
   /** EXPERIENCES ********************************************************************************/
   .experience {
     width: 60%;
-    margin: 0 auto var(--2sp) auto;
+    margin: 0 auto var(--lg-sp) auto;
   }
 
   /** HOBBIES ************************************************************************************/
@@ -59,9 +59,13 @@
     flex-direction: row;
   }
   .links-footer span {
-    padding-right: var(--2sp);
+    padding-right: var(--lg-sp);
   }
   .links-footer span:last-of-type {
     padding-right: 0;
+  }
+  link-footer:nth-of-type(1)::after {
+    content: " . ";
+    color: var(--darkcolor);
   }
 }

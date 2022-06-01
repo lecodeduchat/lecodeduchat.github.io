@@ -25,7 +25,7 @@
     <link
       rel="shortcut icon"
       type="image/ico"
-      href="assets/pictures/favicon-patte-bordeaux.ico"
+      href="assets/pictures/favicon-patte.ico"
     />
     <title>Le Code Du Chat</title>
     <meta
@@ -69,9 +69,9 @@
         </nav>
       </section>
     </header>
-    <main id="content" role="main">
-      <!-- BEGIN WHO I AM ---------------------------------------------------------->
-      <section id="whoiam" class="block">
+    <main id="content">
+      <!-- BEGIN WHO I AM ******************************************************-->
+      <div id="whoiam" class="block">
         <img
           src="/assets/pictures/cat-computer__lg.jpg"
           srcset="
@@ -103,9 +103,9 @@
             </p>
           </article>
         </div>
-      </section>
-      <!-- END WHO I AM ------------------------------------------------------------>
-      <!-- BEGIN SKILLS ------------------------------------------------------------>
+      </div>
+      <!-- END WHO I AM **********************************************************-->
+      <!-- BEGIN SKILLS **********************************************************-->
       <section id="skills" class="block">
         <h2>Compétences</h2>
         <div class="skills content">
@@ -143,16 +143,21 @@
           </article>
         </div>
       </section>
-      <!-- END SKILLS -------------------------------------------------------------->
-      <!-- BEGIN EXPERIENCES ------------------------------------------------------------>
+      <!-- END SKILLS **********************************************************-->
+      <!-- BEGIN EXPERIENCES **********************************************************-->
       <section id="experiences" class="block">
         <div class="experiences content">
           <h2>Expériences</h2>
           <article class="experience content">
             <section class="header-experience">
-              <div class="compagny-experience">Creafi formation</div>
+              <h4 class="compagny-experience">Creafi formation</h4>
               <div class="title-experience">
-                <i class="fas fa-tag"></i>Stage Développeuse Web
+                <img
+                  src="/assets/svg/tag-solid.svg"
+                  alt=""
+                  style="width: 14px; height: 16px; padding-right: 16px"
+                />
+                Stage Développeuse Web
               </div>
               <div class="dates-experience">
                 <i class="fas fa-calendar-days"></i>Janvier 2015 - Mars 2015
@@ -173,7 +178,7 @@
           </article>
           <article class="experience content">
             <section class="header-experience">
-              <div class="compagny-experience">La souris magique</div>
+              <h4 class="compagny-experience">La souris magique</h4>
               <div class="title-experience">
                 <i class="fas fa-tag"></i>Stage Développeuse Web
               </div>
@@ -196,8 +201,8 @@
           </article>
         </div>
       </section>
-      <!-- END EXPERIENCES -------------------------------------------------------------->
-      <!-- BEGIN HOBBIES ------------------------------------------------------------>
+      <!-- END EXPERIENCES **********************************************************-->
+      <!-- BEGIN HOBBIES **********************************************************-->
       <section id="hobbies" class="block">
         <h2>Centres d'intérêts</h2>
         <div class="hobbies content">
@@ -205,7 +210,9 @@
             <img src="/assets/pictures/cats-who-sing-square.jpg" alt="" />
             <div class="name-hobby">Le chant</div>
             <p class="text-hobby">
-              Depuis 2006, membre du groupe CONNIVENCE de Villeneuve d'Ascq.
+              Depuis 2006, membre du groupe
+              <a href="/connivence/index.html">CONNIVENCE</a> de Villeneuve
+              d'Ascq.
             </p>
           </article>
           <article class="hobby content">
@@ -220,7 +227,7 @@
           </article>
         </div>
       </section>
-      <!-- END HOBBIES -------------------------------------------------------------->
+      <!-- END HOBBIES **********************************************************-->
     </main>
     <footer>
       <section id="footer">
@@ -231,9 +238,17 @@
           <i class="fa-brands fa-github"></i>
         </article>
         <article class="links-footer">
-          <span>Mon adresse e-mail: lecodeduchat@gmail.com</span>
-          <span><a href="#Mentions légales">Mentions légales</a></span>
-          <span>Code source sur <a href="#">github</a></span>
+          <span class="link-footer">
+            Mon adresse e-mail: lecodeduchat@gmail.com
+          </span>
+          <span class="fa-solid fa-paw"></span>
+          <span class="link-footer"
+            ><a href="#Mentions légales">Mentions légales</a></span
+          >
+          <span class="fa-solid fa-paw"></span>
+          <span class="link-footer"
+            >Code source sur <a href="#">github</a></span
+          >
         </article>
       </section>
     </footer>
