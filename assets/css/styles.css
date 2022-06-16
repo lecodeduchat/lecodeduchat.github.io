@@ -4,7 +4,7 @@
   --color-bg-dark: rgba(24, 2, 12, 0.5);
   --lightcolor: #f2f3d9;
   --md-1-color: #576066;
-  --md-2-color: #bb23be;
+  --md-2-color: #96b3c2;
   --md-3-color: #e4626f;
   --color-bg-light: rgba(220, 158, 130, 0.5);
   --sp: 16px;
@@ -68,10 +68,10 @@ header {
   height: 65px;
   z-index: 1000;
 }
-header:before {
-  content: " ";
-  position: absolute;
-  top: 100%;
+#gradient-color-bar {
+  z-index: 2000;
+  position: fixed;
+  top: 70px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -79,11 +79,11 @@ header:before {
     90deg,
     var(--md-1-color) 0%,
     var(--md-3-color) 25%,
-    var(--md-3-color) 50%,
-    var(--lightcolor) 75%,
-    var(--md-1-color) 100%
+    var(--md-2-color) 50%,
+    var(--md-1-color) 75%,
+    var(--md-3-color) 100%
   );
-  /* transition: 0.2s; */
+  transition: 0.2s;
 }
 
 /** MY NAME *********************/
