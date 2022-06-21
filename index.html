@@ -59,7 +59,7 @@
                 <a href="#skills">Compétences</a>
               </li>
               <li class="main-menu-item content">
-                <a href="#experiences">Expériences</a>
+                <a href="#career">Carrière</a>
               </li>
               <li class="main-menu-item content">
                 <a href="#hobbies">Centres d'intérêts</a>
@@ -146,59 +146,48 @@
       </section>
       <!-- END SKILLS **********************************************************-->
       <!-- BEGIN EXPERIENCES **********************************************************-->
-      <section id="experiences" class="block">
-        <div class="experiences content">
-          <h2>Expériences</h2>
-          <article class="experience content">
-            <section class="header-experience">
-              <h4 class="compagny-experience">Creafi formation</h4>
-              <div class="title-experience">
-                <img
-                  src="/assets/svg/tag-solid.svg"
-                  alt=""
-                  style="width: 14px; height: 16px; padding-right: 16px"
-                />
-                Stage Développeuse Web
-              </div>
-              <div class="dates-experience">
-                <i class="fas fa-calendar-days"></i>Janvier 2015 - Mars 2015
-              </div>
-              <div class="location-experience">
-                <i class="fas fa-location-dot"></i>Lille
-              </div>
-            </section>
-            <p>
-              <span class="tasks">Missions:</span> Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Quo pariatur officiis, dolore
-              provident et aperiam veritatis consequatur nihil blanditiis
-              asperiores accusantium quibusdam rem sint magni modi ab ut quas
-              odio quam ad similique iusto nostrum! Beatae nemo expedita
-              aspernatur tempora sapiente, minima quo, nam numquam doloremque
-              maiores incidunt nostrum optio?
-            </p>
+      <section id="career" class="block">
+        <div class="career content">
+          <h2 class="career__title">Carrière</h2>
+          <article class="career__experience content">
+            <div class="career__experience-date">2010</div>
+            <h4 class="career__experience-title">Stage de développeur web</h4>
+            <div class="career__experience--compagny">
+              La souris magique
+              <img
+                src="/assets/svg/tag-solid.svg"
+                alt=""
+                class="career__experience-icon"
+              />
+            </div>
+            <div class="career__experience-dates">
+              Mars 2010 - Juin 2010
+              <i class="fas fa-calendar-days career__experience-icon"></i>
+            </div>
+            <div class="career__experience-location">
+              La Madeleine
+              <i class="fas fa-location-dot career__experience-icon"></i>
+            </div>
           </article>
-          <article class="experience content">
-            <section class="header-experience">
-              <h4 class="compagny-experience">La souris magique</h4>
-              <div class="title-experience">
-                <i class="fas fa-tag"></i>Stage Développeuse Web
-              </div>
-              <div class="dates-experience">
-                <i class="fas fa-calendar-days"></i>Mars 2010 - Juin 2010
-              </div>
-              <div class="location-experience">
-                <i class="fas fa-location-dot"></i>La Madeleine
-              </div>
-            </section>
-            <p>
-              <span class="tasks">Missions:</span> Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Quo pariatur officiis, dolore
-              provident et aperiam veritatis consequatur nihil blanditiis
-              asperiores accusantium quibusdam rem sint magni modi ab ut quas
-              odio quam ad similique iusto nostrum! Beatae nemo expedita
-              aspernatur tempora sapiente, minima quo, nam numquam doloremque
-              maiores incidunt nostrum optio?
-            </p>
+          <article class="career__training content">
+            <div class="career__training-date">2010</div>
+            <h4 class="career__training-title">TEMIR</h4>
+            <div class="career__training-info">
+              <img
+                src="/assets/svg/tag-solid.svg"
+                alt=""
+                class="career__training-icon"
+              />
+              Technicien En Maintenance Informatique et Réseaux
+            </div>
+            <div class="career__training-dates">
+              <i class="fas fa-calendar-days career__training-icon"></i>Décembre
+              2009 - Juin 2010
+            </div>
+            <div class="career__training-location">
+              <i class="fas fa-location-dot career__training-icon"></i
+              >Université de Lille 1
+            </div>
           </article>
         </div>
       </section>
@@ -208,7 +197,42 @@
         <h2>Centres d'intérêts</h2>
         <div class="hobbies content">
           <article class="hobby content">
-            <img src="/assets/pictures/cats-who-sing-square.jpg" alt="" />
+            <div id="music-hobby">
+              <img
+                src="/assets/pictures/cats-who-sing.jpg"
+                alt="des chats qui chantent"
+              />
+              <ul class="music-notes">
+                <li class="music-notes">
+                  <img
+                    class="music-notes"
+                    src="/assets/pictures/cle-de-sol.png"
+                    alt="clé de sol"
+                  />
+                </li>
+                <li class="music-notes">
+                  <img
+                    class="music-notes"
+                    src="/assets/pictures/croche.png"
+                    alt="note de musique, croche"
+                  />
+                </li>
+                <li class="music-notes">
+                  <img
+                    class="music-notes"
+                    src="/assets/pictures/double-croche.png"
+                    alt="note de musique, double croche"
+                  />
+                </li>
+                <li class="music-notes">
+                  <img
+                    class="music-notes"
+                    src="/assets/pictures/notes.png"
+                    alt="3 notes de musique"
+                  />
+                </li>
+              </ul>
+            </div>
             <div class="name-hobby">Le chant</div>
             <p class="text-hobby">
               Depuis 2006, membre du groupe
@@ -217,7 +241,10 @@
             </p>
           </article>
           <article class="hobby content">
-            <img src="/assets/pictures/cat-who-read.jpg" alt="" />
+            <img
+              src="/assets/pictures/cat-who-read.jpg"
+              alt="un chat qui lit"
+            />
             <div class="name-hobby">La lecture</div>
             <p class="text-hobby">
               Romans policiers, fantasy et SF.<br />
@@ -226,7 +253,10 @@
             </p>
           </article>
           <article class="hobby content">
-            <img src="/assets/pictures/cats-love-yoga.jpg" alt="" />
+            <img
+              src="/assets/pictures/cats-love-yoga.jpg"
+              alt="des chats qui font du yoga"
+            />
             <div class="name-hobby">Le sport</div>
             <p class="text-hobby">
               Le yoga,<br />

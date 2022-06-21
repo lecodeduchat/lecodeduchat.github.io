@@ -18,3 +18,18 @@ function animateBar() {
     elt.style.top = "70px";
   }
 }
+let tableMusicNotes = document.querySelectorAll("li.music-notes");
+function animateMusicNotes() {
+  let positionTopNotes = ["35px", "10px", "20px", "50px"];
+  let positionLeftNotes = ["90px", "120px", "150px", "60px"];
+
+  for (let i = 0; i < 4; i++) {
+    tableMusicNotes[i].style.top = positionTopNotes[i];
+    tableMusicNotes[i].style.left = positionLeftNotes[i];
+  }
+  let elt = tableMusicNotes[3];
+  tableMusicNotes.unshift("+elt+");
+  tableMusicNotes.pop();
+  animateMusicNotes();
+}
+animateMusicNotes();

@@ -263,42 +263,147 @@ p.myname span {
   line-height: 24px;
   margin: 0 0 var(--sp);
 }
-/**  experiences ********************************************************/
-#experiences {
+/**  career ********************************************************/
+#career {
   background-color: var(--color-bg-light);
   padding-bottom: var(--sp);
 }
-.experience {
-  background-color: #fff;
-  padding: var(--lg-sp);
-  border-radius: 5px;
-  margin-bottom: var(--lg-sp);
+#career::before,
+#career::after {
+  content: " ";
+  z-index: 500;
+  position: absolute;
+  top: 100px;
+  width: 4px;
+  height: calc(186px * 2 + 128px);
+  /* height: 372px; */
+  background-image: linear-gradient(
+    180deg,
+    var(--md-1-color) 0%,
+    var(--md-3-color) 25%,
+    var(--md-2-color) 50%,
+    var(--md-1-color) 75%,
+    var(--md-3-color) 100%
+  );
 }
-.tasks {
-  color: var(--md-2-color);
-  font-weight: bold;
+#career::before {
+  left: 14px;
 }
-.header-experience {
-  font-size: 16px;
-  line-height: 2rem;
+#career::after {
+  right: 14px;
 }
-.header-experience i {
+.career::before,
+.career::after {
+  z-index: 555;
+  content: " ";
+  position: absolute;
+  top: 80px;
+
+  display: block;
+  width: 30px;
+  height: 30px;
+  -webkit-clip-path: polygon(0 100%, 50% 0, 100% 100%, 50% 75%);
+  clip-path: polygon(0 100%, 50% 0, 100% 100%, 50% 75%);
+  background-image: linear-gradient(
+    var(--md-1-color),
+    var(--md-3-color),
+    var(--md-3-color)
+  );
+}
+.career::before {
+  left: 1px;
+}
+.career::after {
+  right: 1px;
+}
+.career__experience::before,
+.career__training::before {
+  z-index: 550;
+  content: " ";
+  position: absolute;
+  top: -34px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: radial-gradient(var(--lightcolor) 40%, transparent 45%),
+    linear-gradient(
+      135deg,
+      var(--md-1-color),
+      var(--md-3-color),
+      var(--md-2-color),
+      var(--md-1-color),
+      var(--md-3-color)
+    );
+}
+.career__experience::before {
+  right: -26px;
+}
+.career__training::before {
+  left: -26px;
+}
+.career__title {
+  margin-bottom: 64px;
+}
+.career__experience-icon,
+.career__training-icon {
+  width: 14px;
+  height: 16px;
+}
+.career__experience-icon {
+  padding-left: var(--sp);
+}
+.career__training-icon {
   padding-right: var(--sp);
 }
-.compagny-experience {
+.career__experience,
+.career__training {
+  position: relative;
+  background-color: #fff;
+  padding: var(--sp) var(--sp);
+  border-radius: 5px;
+  margin-bottom: 64px;
+}
+.career__experience {
+  text-align: right;
+}
+.career__experience-date,
+.career__training-date {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(
+    180deg,
+    var(--md-1-color) 0%,
+    var(--md-3-color) 25%,
+    var(--md-2-color) 50%,
+    var(--md-1-color) 75%,
+    var(--md-3-color) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.career__training-date {
+  position: absolute;
+  top: -38px;
+  left: 0px;
+  padding-left: 0px;
+}
+.career__experience-date {
+  position: absolute;
+  top: -38px;
+  right: 0px;
+}
+.career__experience-dates,
+.career__training-dates {
+  padding: var(--sp) 0;
+}
+.career__experience-title,
+.career__training-title {
   font-size: 22px;
   font-weight: bold;
+  padding-bottom: var(--sp);
 }
-.compagny-experience span {
-  font-weight: normal;
-}
-.experience p {
-  padding-top: var(--lg-sp);
-  padding-bottom: 0;
-}
-.fa-tag::before {
-  transform: rotateY(180deg);
-}
+
 /**  hobbies **********************************************************/
 #hobbies {
   background-color: var(--darkcolor);
@@ -338,6 +443,42 @@ p.myname span {
 .text-hobby a {
   text-decoration: none;
   color: #fff;
+}
+#music-hobby {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ul.music-notes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+}
+img.music-notes {
+  width: auto;
+  max-height: 15px;
+  border-radius: 0%;
+}
+li.music-notes {
+  position: absolute;
+}
+li.music-notes:first-child {
+  top: 50px;
+  left: 60px;
+}
+li.music-notes:nth-child(2) {
+  top: 35px;
+  left: 90px;
+}
+li.music-notes:nth-child(3) {
+  top: 10px;
+  left: 120px;
+}
+li.music-notes:last-child {
+  top: 20px;
+  left: 150px;
 }
 /**  footer **********************************************************/
 footer {
