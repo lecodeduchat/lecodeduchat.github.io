@@ -71,7 +71,7 @@ header {
 #gradient-color-bar {
   z-index: 2000;
   position: fixed;
-  top: 70px;
+  top: 65px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -268,8 +268,7 @@ p.myname span {
   background-color: var(--color-bg-light);
   padding-bottom: var(--sp);
 }
-#career::before,
-#career::after {
+.career__timeline {
   content: " ";
   z-index: 500;
   position: absolute;
@@ -286,19 +285,19 @@ p.myname span {
     var(--md-3-color) 100%
   );
 }
-#career::before {
+.career__timeline.left {
   left: 14px;
 }
-#career::after {
+.career__timeline.right {
   right: 14px;
 }
-.career::before,
-.career::after {
+/* arrow of the timeline*/
+.career__timeline::before {
   z-index: 555;
   content: " ";
   position: absolute;
-  top: 80px;
-
+  top: -20px;
+  left: -14px;
   display: block;
   width: 30px;
   height: 30px;
@@ -310,14 +309,8 @@ p.myname span {
     var(--md-3-color)
   );
 }
-.career::before {
-  left: 1px;
-}
-.career::after {
-  right: 1px;
-}
-.career__experience::before,
-.career__training::before {
+/** circle of the timeline */
+.career__period::before {
   z-index: 550;
   content: " ";
   position: absolute;
@@ -335,39 +328,60 @@ p.myname span {
       var(--md-3-color)
     );
 }
-.career__experience::before {
+.career__period.experience::before {
   right: -26px;
 }
-.career__training::before {
+.career__period.training::before {
   left: -26px;
 }
-.career__title {
-  margin-bottom: 64px;
+.career__period {
+  position: relative;
 }
-.career__experience-icon,
-.career__training-icon {
-  width: 14px;
-  height: 16px;
+.career__period-date.experience {
+  text-align: right;
 }
-.career__experience-icon {
-  padding-left: var(--sp);
-}
-.career__training-icon {
-  padding-right: var(--sp);
-}
-.career__experience,
-.career__training {
+.career__period-info {
   position: relative;
   background-color: #fff;
   padding: var(--sp) var(--sp);
   border-radius: 5px;
   margin-bottom: 64px;
 }
-.career__experience {
-  text-align: right;
+.career__period-info div {
+  display: flex;
+  flex-direction: row;
 }
-.career__experience-date,
-.career__training-date {
+.career__period-info.experience div {
+  justify-content: end;
+}
+.career__period-info.training div {
+  flex-direction: row-reverse;
+  justify-content: start;
+}
+.career__period-info div span {
+  display: block;
+}
+.career__period-info.experience div span {
+  padding-right: var(--sp);
+}
+.career__period-info.training div span {
+  padding-left: var(--sp);
+}
+.career__title {
+  margin-bottom: 64px;
+}
+.career__period-icon {
+  width: 14px;
+  height: 16px;
+}
+/* .career__period-icon {
+  padding-left: var(--sp);
+}
+.career__period-icon {
+  padding-right: var(--sp);
+} */
+
+.career__period-date {
   font-size: 1.8rem;
   font-weight: 700;
   background: linear-gradient(
@@ -382,23 +396,22 @@ p.myname span {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.career__training-date {
+.career__period-date {
   position: absolute;
   top: -38px;
   left: 0px;
   padding-left: 0px;
 }
-.career__experience-date {
+.career__period-date {
   position: absolute;
   top: -38px;
   right: 0px;
 }
-.career__experience-dates,
-.career__training-dates {
+.career__period-dates {
   padding: var(--sp) 0;
 }
-.career__experience-title,
-.career__training-title {
+
+.career__period-title {
   font-size: 22px;
   font-weight: bold;
   padding-bottom: var(--sp);

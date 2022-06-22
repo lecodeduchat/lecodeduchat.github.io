@@ -3,6 +3,9 @@
   header {
     height: 70px;
   }
+  #gradient-color-bar {
+    top: 70px;
+  }
   h1 {
     line-height: 68px;
   }
@@ -43,12 +46,58 @@
   .skill {
     width: calc(33% - var(--lg-sp));
   }
-  /** CAREER ********************************************************************************/
-  .experience {
-    width: 60%;
-    margin: 0 auto var(--lg-sp) auto;
+  /** CAREER *************************************************************************************/
+  .career__timeline.right {
+    display: none;
   }
-
+  .career__timeline.left {
+    left: 50%;
+  }
+  .career__period.experience::before {
+    right: calc(50% - 12px);
+  }
+  .career__period.training::before {
+    left: calc(50% - 8px);
+  }
+  .career__period-info,
+  .career__period-date {
+    width: 40%;
+  }
+  .career__period.training {
+    text-align: right;
+  }
+  .career__period-date.experience {
+    text-align: left;
+    margin-left: calc(50% + var(--lg-sp));
+  }
+  .career__period-info.experience {
+    margin-left: calc(50% + var(--lg-sp));
+  }
+  .career__period-info.experience div {
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+  .career__period-info.experience div span {
+    padding-left: var(--sp);
+  }
+  .career__period-date.training {
+    text-align: right;
+    margin-left: calc(10% - var(--lg-sp));
+  }
+  .career__period-info.training {
+    margin-left: calc(10% - 62px);
+  }
+  .career__period-info.training div {
+    flex-direction: row;
+    justify-content: end;
+  }
+  .career__period-info.training div span {
+    padding-right: var(--sp);
+  }
+  /* .career__period-date.training {
+    text-align: right;
+    margin-right: calc(50% +var(--lg-sp));
+  } */
   /** HOBBIES ************************************************************************************/
   #hobbies h2 {
     margin-bottom: var(--lg-sp);
