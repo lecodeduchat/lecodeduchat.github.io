@@ -115,16 +115,16 @@
   /** CAREER ********************************************************************************/
   .career__period-info,
   .career__period-date {
-    width: 30%;
+    width: 45%;
   }
   .career__period-date.training {
     text-align: right;
-    margin-left: calc(20% - var(--lg-sp));
+    margin-left: calc(5% - var(--lg-sp));
   }
   .career__period-info.training {
     margin-left: calc(
-      20% - 62px
-    ); /** 50% de marge - 30% de period-info.width = 20% */
+      5% - 62px
+    ); /** 50% de marge - 45% de period-info.width = 20% */
   }
   /** HOBBIES ************************************************************************************/
 
