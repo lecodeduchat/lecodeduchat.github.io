@@ -43,9 +43,24 @@
   }
 
   /** SKILLS *************************************************************************************/
-  .skill {
-    width: calc(33% - var(--lg-sp));
+  #skills {
+    padding-bottom: var(--lg-sp);
   }
+  .skills__item {
+    width: calc(33% - var(--lg-sp));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .skills__item-icon {
+    display: block;
+    text-align: center;
+    padding-left: var(--sp);
+  }
+  .skills__item p {
+    text-align: center;
+  }
+
   /** CAREER *************************************************************************************/
   .career__timeline.right {
     display: none;
@@ -112,17 +127,24 @@
   }
 
   /** FOOTER *************************************************************************************/
-  .links-footer {
+  .footer__links {
     flex-direction: row;
   }
-  .links-footer span {
+  .footer__links span {
     padding-right: var(--lg-sp);
   }
-  .links-footer span:last-of-type {
+  .footer__links span:last-of-type {
     padding-right: 0;
   }
-  link-footer:nth-of-type(1)::after {
-    content: " . ";
-    color: var(--darkcolor);
+  .footer__links-item a {
+    color: #fff;
+  }
+  .footer__links-item a:hover {
+    text-decoration: underline;
+    color: var(--md-2-color);
+  }
+  /** LEGAL NOTICES *******************************************************************************/
+  #legal-notices {
+    margin-top: 70px;
   }
 }

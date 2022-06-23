@@ -7,7 +7,7 @@
   #main-header,
   .whoiam,
   .skills,
-  .experiences,
+  .career,
   .hobbies {
     width: 1280px;
     margin: auto;
@@ -87,10 +87,32 @@
     width: 45%;
   }
   /** SKILLS *************************************************************************************/
-  .skill {
+  .skills__item {
     width: calc(25% - var(--lg-sp));
   }
-
+  .skills__item p {
+    padding: 0 var(--sp);
+  }
+  .skills__item::before {
+    z-index: -1;
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 200px;
+    background-color: var(--color-bg-dark);
+    transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(
+      50% 0,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0 75%,
+      0 25%
+    );
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
   /** CAREER ********************************************************************************/
   .career__period-info,
   .career__period-date {
@@ -108,7 +130,10 @@
   /** HOBBIES ************************************************************************************/
 
   /** FOOTER *************************************************************************************/
-  .link-footer address {
-    display: inline;
+
+  /** LEGAL NOTICES ******************************************************************************/
+  #legal-notices {
+    width: 800px;
+    margin: 70px auto 0px auto;
   }
 }
