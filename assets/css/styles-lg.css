@@ -19,9 +19,6 @@
     text-align: left;
     padding: 0 var(--sp);
   }
-  h1 a {
-    color: lightgreen;
-  }
   #main-header {
     display: flex;
     flex-direction: row;
@@ -88,7 +85,9 @@
   }
   /** SKILLS *************************************************************************************/
   .skills__item {
-    width: calc(25% - var(--lg-sp));
+    width: calc(25% - 64px);
+    background-color: transparent;
+    margin-bottom: var(--lg-sp);
   }
   .skills__item p {
     padding: 0 var(--sp);
@@ -100,8 +99,8 @@
     top: 50%;
     left: 50%;
     width: 180px;
-    height: 200px;
-    background-color: var(--color-bg-dark);
+    height: 180px;
+    background-color: rgba(var(--color-bg-dark), 0.2);
     transform: translate(-50%, -50%);
     -webkit-clip-path: polygon(
       50% 0,

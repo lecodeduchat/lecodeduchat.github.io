@@ -1,7 +1,7 @@
 /** variables du thème *************************************************/
 :root {
   --darkcolor: #18020c;
-  --color-bg-dark: rgba(24, 2, 12, 0.5);
+  --color-bg-dark: 24, 2, 12;
   --lightcolor: #f2f3d9;
   --md-1-color: #576066;
   --md-2-color: #96b3c2;
@@ -97,6 +97,22 @@ h1 a {
   color: white;
   line-height: 65px;
 }
+h1 a:hover {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(
+    180deg,
+    var(--md-1-color) 0%,
+    var(--md-3-color) 25%,
+    var(--md-2-color) 50%,
+    var(--lightcolor) 75%,
+    var(--md-3-color) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 1s;
+}
 h1 span {
   font-family: "Merienda";
   font-style: normal;
@@ -187,7 +203,9 @@ h1 span {
   text-decoration: none;
   color: var(--md-1-color);
 }
-
+.main-menu-item a:hover {
+  color: var(--md-3-color);
+}
 /** WHO I AM ***************************************************************/
 #whoiam {
   margin-top: 70px;
@@ -198,7 +216,6 @@ h1 span {
 
 p.myname {
   font-size: 20px;
-  /* margin: 0px 0px var(--sp); */
 }
 p.myname span {
   font-family: Merienda;
@@ -218,7 +235,7 @@ p.myname span {
   z-index: 0;
 }
 .whoiam article {
-  background-color: var(--color-bg-dark);
+  background-color: rgba(var(--color-bg-dark), 0.5);
   backdrop-filter: blur(5px);
   position: relative;
   line-height: 1.5;
@@ -252,7 +269,12 @@ p.myname span {
   flex-direction: row;
   flex-wrap: wrap;
   color: #fff;
+  background-color: rgba(var(--color-bg-dark), 0.2);
+  padding: var(--sp);
+  margin-bottom: var(--sp);
+  border-radius: 2%;
 }
+
 .skills__item-icon {
   display: inline-block;
   font-size: 24px;
@@ -265,7 +287,6 @@ p.myname span {
 .skills__item p {
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 var(--sp);
 }
 /**  career ********************************************************/
 #career {
@@ -378,13 +399,6 @@ p.myname span {
   width: 14px;
   height: 16px;
 }
-/* .career__period-icon {
-  padding-left: var(--sp);
-}
-.career__period-icon {
-  padding-right: var(--sp);
-} */
-
 .career__period-date {
   font-size: 1.8rem;
   font-weight: 700;

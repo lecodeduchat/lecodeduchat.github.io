@@ -9,9 +9,7 @@
   h1 {
     line-height: 68px;
   }
-  h1 a {
-    color: aqua;
-  }
+
   /** NAVIGATION *********************************************************************************/
   .main-menu {
     width: auto;
@@ -47,15 +45,19 @@
     padding-bottom: var(--lg-sp);
   }
   .skills__item {
-    width: calc(33% - var(--lg-sp));
+    width: calc(33% - 64px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .skills__item-icon {
     display: block;
     text-align: center;
     padding-left: var(--sp);
+    padding-bottom: 0px;
+  }
+  .skills__item-title span {
+    display: none;
   }
   .skills__item p {
     text-align: center;
