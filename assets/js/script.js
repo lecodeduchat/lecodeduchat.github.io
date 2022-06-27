@@ -11,11 +11,14 @@ window.onscroll = function () {
 function animateBar() {
   let scrollHeight = document.documentElement.scrollTop;
   let elt = document.querySelector("#gradient-color-bar");
+  let header = document.querySelector("header");
 
   if (scrollHeight > screenHeight) {
     elt.style.top = "0px";
+    header.style.top = "4px";
   } else {
     elt.style.top = "70px";
+    header.style.top = "0px";
   }
 }
 let tableMusicNotes = document.querySelectorAll("li.music-notes");

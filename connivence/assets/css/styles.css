@@ -1,0 +1,53 @@
+/** variables du thème *************************************************/
+:root {
+  --bluecolor: #1fcdff;
+  --browncolor: #a9716c;
+  --sm-sp: 16px;
+  --md-sp: 32px;
+  --lg-sp: 64px;
+}
+/** global ************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Open sans, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  height: 100%;
+}
+/** POLICES DU SITE ****************************************************/
+@font-face {
+  font-family: "Stencil";
+  src: "../fonts/StencilStd.otf";
+}
+@font-face {
+  font-family: "Century gothic";
+  src: "../fonts/GOTHICB.TTF";
+}
+/** HEADER *************************************************************/
+#header {
+  position: fixed;
+  height: 70px;
+  line-height: 70px;
+  display: flex;
+  flex-direction: row;
+}
+.header__logo {
+  width: 200px;
+  flex-grow: 0;
+}
+.header__logo img {
+  width: 200px;
+}
+#header__menu {
+  flex-grow: 1;
+  background-color: green;
+}
+#header__menu-content {
+  display: none;
+}
+/** HOME ***************************************************************/
+#home {
+  background-image: url(/assets/img/bg-dark-wood.jpg);
+}

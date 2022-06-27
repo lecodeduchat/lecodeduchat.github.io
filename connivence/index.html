@@ -4,41 +4,85 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../assets/fontawesome/css/all.css"
+      media="all"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="assets/css/styles-md.css"
+      media="(min-width:48rem)"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/styles-lg.css"
+      media="(min-width:75rem)"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="assets/pictures/favicon-patte.ico"
+    />
     <title>Connivence</title>
   </head>
   <body>
     <header>
       <section id="header">
-        <h1>CONNIVENCE</h1>
-        <nav>
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#aboutwe">Présentation du groupe</a>
-            </li>
-            <li class="nav-item">
-              <a href="#playlists">Nos enregistrements</a>
-            </li>
-            <li class="nav-item"><a href="#contact">Contacte</a></li>
-          </ul>
+        <h1 class="header__logo">
+          <a href="#home"
+            ><img
+              src="/assets/img/connivence-logo-.png"
+              alt="logo du groupe musical connivence"
+          /></a>
+        </h1>
+        <nav class="header__menu">
+          <button id="burger-menu">
+            <span class="fa-solid fa-bars">menu</span>
+          </button>
+          <div id="header__menu-content">
+            <div class="header__menu-header">
+              <span>MENU</span>
+              <span class="fa-solid fa-xmark"></span>
+            </div>
+            <ul>
+              <li class="nav-item">
+                <a href="#aboutwe">Biographie</a>
+              </li>
+              <li class="nav-item">
+                <a href="#music">Musique</a>
+              </li>
+              <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </nav>
       </section>
     </header>
     <main>
-      <section id="home">
-        <h2>Bienvenue sur le site du groupe Connivence!</h2>
-      </section>
+      <div id="home">
+        <img src="/assets/img/scene-instruments.png" alt="scène de spectacle" />
+        <div class="home__slider">
+          <figure>
+            <div class="home_slider-item">Animation soirée.</div>
+            <div class="home_slider-item">Musique d'ambiance.</div>
+            <div class="home_slider-item">Spectacle.</div>
+          </figure>
+        </div>
+      </div>
       <article id="aboutwe">
-        <h2>Présentation du groupe</h2>
-        <section class="origin"></section>
-        <section class="members"></section>
+        <h2>Le groupe musical CONNIVENCE</h2>
+        <section class="aboutwe__history"></section>
+        <section class="aboutwe__members"></section>
       </article>
-      <article id="playlists">
-        <h2>Nos enregistrements</h2>
+      <article id="music">
+        <h2>Musique</h2>
       </article>
+    </main>
+    <footer>
       <article id="contact">
         <h2>Nous contacter</h2>
       </article>
-    </main>
-    <footer></footer>
+    </footer>
   </body>
 </html>

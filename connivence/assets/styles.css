@@ -1,9 +1,0 @@
-/** variables du thème *************************************************/
-:root {
-  --bluecolor: #1fcdff;
-  --browncolor: #a9716c;
-}
-/** global *************************************************/
-h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}

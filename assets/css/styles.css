@@ -65,13 +65,13 @@ header {
   left: 0;
   background-color: var(--darkcolor);
   width: 100%;
-  height: 65px;
-  z-index: 1000;
+  height: 70px;
+  z-index: 10;
 }
 #gradient-color-bar {
-  z-index: 2000;
+  z-index: 9;
   position: fixed;
-  top: 65px;
+  top: 70px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -95,7 +95,7 @@ h1 a {
   font-size: 26px;
   text-decoration: none;
   color: white;
-  line-height: 65px;
+  line-height: 70px;
 }
 h1 a:hover {
   font-size: 1.8rem;
@@ -146,9 +146,10 @@ h1 span {
   color: white;
   width: 20px;
   height: 20px;
-  line-height: 65px;
+  line-height: 70px;
 }
 .menu-content {
+  z-index: 10;
   background-color: white;
   position: absolute;
   top: 0;
@@ -295,11 +296,11 @@ p.myname span {
 }
 .career__timeline {
   content: " ";
-  z-index: 500;
+  z-index: 5;
   position: absolute;
   top: 100px;
   width: 4px;
-  height: calc(186px * 7 + 128px);
+  height: calc(186px * 8 + 128px);
   /* height: 372px; */
   background-image: linear-gradient(
     180deg,
@@ -318,7 +319,7 @@ p.myname span {
 }
 /* arrow of the timeline*/
 .career__timeline::before {
-  z-index: 555;
+  z-index: 6;
   content: " ";
   position: absolute;
   top: -20px;
@@ -336,7 +337,7 @@ p.myname span {
 }
 /** circle of the timeline */
 .career__period::before {
-  z-index: 550;
+  z-index: 6;
   content: " ";
   position: absolute;
   top: -34px;
