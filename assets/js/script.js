@@ -1,3 +1,4 @@
+//----------------------------------------------------------------------
 // Animation de la barre dégradée
 const gradientColorBar = document.querySelector("#gradient-color-bar");
 const header = document.querySelector("header");
@@ -14,10 +15,36 @@ window.addEventListener("scroll", () => {
 });
 
 //----------------------------------------------------------------------
-// Animation des chats qui chantent
+// Animation de la div Hobby Music
 const musicHobby = document.getElementById("hobby-music");
 
-// Fabricateur de notes de musique
+// Music animation
+let sing = false;
+const audio = new Audio();
+audio.src = "/assets/music/catmeow.mp3";
+audio.loop = true;
+const pauseAuto = () => {
+  audio.pause();
+  //musicHobby.style.transform = "scale(1)";
+  musicHobby.classList.remove("sing");
+  sing = false;
+};
+
+musicHobby.addEventListener("click", () => {
+  if (!sing) {
+    audio.play();
+    musicHobby.classList.add("sing");
+    setTimeout(pauseAuto, 8000);
+    sing = true;
+  } else {
+    audio.pause();
+    musicHobby.classList.remove("sing");
+    sing = false;
+  }
+});
+
+// Notes animation
+
 const noteMaker = () => {
   const arrayNotes = [
     "/assets/svg/eighth-note.svg",
@@ -29,14 +56,12 @@ const noteMaker = () => {
   // Création d'une variable aléatoire comprise entre 0 et 4 pour le choix d'une image issue du arrayNotes
   const choice = Math.round(Math.random() * 10 * 0.4);
 
-  // cat left
   const noteLeft = document.createElement("img");
   noteLeft.classList.add("hobby-music");
   noteLeft.classList.add("cat-left");
   noteLeft.src = arrayNotes[choice];
   musicHobby.appendChild(noteLeft);
 
-  // cat right
   const noteRight = document.createElement("img");
   noteRight.classList.add("hobby-music");
   noteRight.classList.add("cat-right");
@@ -53,7 +78,6 @@ const noteMaker = () => {
     noteRight.remove();
   }, 6000);
 };
-
 setInterval(noteMaker, 500);
 
 //----------------------------------------------------------------------

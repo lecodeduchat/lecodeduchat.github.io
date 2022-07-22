@@ -29,7 +29,7 @@ const arraySkills = [
     info: "Wordpress et Drupal.",
   },
   {
-    icon: "fa-code",
+    icon: "fa-mobile-screen-button",
     title: "RWD",
     info: "Bonne pratique en design responsive. Approche mobile-first.",
   },

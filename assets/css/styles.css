@@ -481,6 +481,7 @@ p.myname span {
   width: 150px;
   margin: auto;
   border-radius: 50%;
+  transition: 0.6s;
 }
 .hobby-music {
   z-index: 5;
@@ -505,7 +506,10 @@ p.myname span {
     opacity: 1;
   }
 }
-
+.sing {
+  transform: scale(1.2);
+  border: 6px solid var(--md-3-color);
+}
 /**  footer **********************************************************/
 footer {
   background-color: #576066;
