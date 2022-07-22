@@ -26,8 +26,8 @@ const noteMaker = () => {
     "/assets/svg/quarter-note.svg",
     "/assets/svg/sixteenth-note.svg",
   ];
-  // Création d'une variable aléatoire comprise entre 0 et 5 pour le choix d'une image issue du arrayNotes
-  const choice = Math.round(Math.random() * 10 * 0.5);
+  // Création d'une variable aléatoire comprise entre 0 et 4 pour le choix d'une image issue du arrayNotes
+  const choice = Math.round(Math.random() * 10 * 0.4);
 
   // cat left
   const noteLeft = document.createElement("img");
@@ -57,3 +57,8 @@ const noteMaker = () => {
 setInterval(noteMaker, 500);
 
 //----------------------------------------------------------------------
+// Adapter la timeline en fonction de l'écran de l'utilisateur
+const careerContent = document.querySelector("div.career.content");
+const heightTimeLine = careerContent.clientHeight - 98 + "px"; // je soustrais la hauteur du h2 de 98px
+const careerTimeLine = document.querySelector(".career__timeline");
+careerTimeLine.style.setProperty("--heightTimeLine", heightTimeLine);

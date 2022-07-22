@@ -300,8 +300,7 @@ p.myname span {
   position: absolute;
   top: 100px;
   width: 4px;
-  height: calc(186px * 8 + 128px);
-  /* height: 372px; */
+  height: var(--heightTimeLine);
   background-image: linear-gradient(
     180deg,
     var(--md-1-color) 0%,
