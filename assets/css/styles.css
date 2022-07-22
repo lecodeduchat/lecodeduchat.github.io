@@ -454,12 +454,12 @@ p.myname span {
   justify-content: center;
   padding-bottom: var(--lg-sp);
 }
-.hobby img,
+.hobby-img,
 .name-hobby,
 .text-hobby {
   margin: auto;
 }
-.hobby img {
+.hobby-img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -476,42 +476,38 @@ p.myname span {
   text-decoration: none;
   color: #fff;
 }
-#music-hobby {
+#hobby-music {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  overflow: hidden;
+  width: 150px;
+  margin: auto;
+  border-radius: 50%;
 }
-ul.music-notes {
+.hobby-music {
+  z-index: 5;
+  opacity: 0.3;
   position: absolute;
-  top: 0;
-  left: 0;
-  list-style: none;
+  width: 15px;
+  height: 30px;
+  animation: anim 6s forwards;
 }
-img.music-notes {
-  width: auto;
-  max-height: 15px;
-  border-radius: 0%;
+.cat-left {
+  top: 68px;
+  left: 30px;
 }
-li.music-notes {
-  position: absolute;
+.cat-right {
+  top: 54px;
+  left: 110px;
 }
-li.music-notes:first-child {
-  top: 50px;
-  left: 60px;
+@keyframes anim {
+  to {
+    top: -50px;
+    left: var(--left);
+    opacity: 1;
+  }
 }
-li.music-notes:nth-child(2) {
-  top: 35px;
-  left: 90px;
-}
-li.music-notes:nth-child(3) {
-  top: 10px;
-  left: 120px;
-}
-li.music-notes:last-child {
-  top: 20px;
-  left: 150px;
-}
+
 /**  footer **********************************************************/
 footer {
   background-color: #576066;
