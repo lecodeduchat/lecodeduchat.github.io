@@ -53,6 +53,10 @@ h3 {
   font-style: normal;
   font-weight: bold;
 }
+h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 20px;
+}
 p {
   line-height: 1.8;
   padding-bottom: var(--sp);

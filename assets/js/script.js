@@ -23,23 +23,23 @@ let sing = false;
 const audio = new Audio();
 audio.src = "/assets/music/catmeow.mp3";
 audio.loop = true;
-const pauseAuto = () => {
+const playSing = () => {
+  audio.play();
+  musicHobby.classList.add("sing");
+  sing = true;
+};
+const pauseSing = () => {
   audio.pause();
-  //musicHobby.style.transform = "scale(1)";
   musicHobby.classList.remove("sing");
   sing = false;
 };
 
 musicHobby.addEventListener("click", () => {
   if (!sing) {
-    audio.play();
-    musicHobby.classList.add("sing");
-    setTimeout(pauseAuto, 8000);
-    sing = true;
+    playSing();
+    setTimeout(pauseSing, 8000);
   } else {
-    audio.pause();
-    musicHobby.classList.remove("sing");
-    sing = false;
+    pauseSing();
   }
 });
 
