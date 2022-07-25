@@ -11,7 +11,7 @@
   <body>
     <section id="playlists" class="content">
       <h2>MUSIQUE</h2>
-      <article class="playlist">
+      <article id="ambiance" class="playlist">
         <div class="playlist__header">
           <div class="playlist__recordCover">
             <img
@@ -36,7 +36,7 @@
             />
           </div>
         </div>
-        <h3>Ambiance</h3>
+        <h3>Répertoire d'ambiance</h3>
         <div class="playlist__control">
           <button class="btn-xl-music read">Lecture</button>
           <button class="btn-xl-music shuffle">Aléatoire</button>
@@ -44,7 +44,8 @@
         <section class="playlist__track">
           <img class="sm-cover" src="/assets/pictures/sirens-call.png" alt="" />
           <h4>Titre du morceau</h4>
-          <div class="performer">Interprète</div>
+          <div class="performer">PERFORMER</div>
+          <div class="cover">Cover by <span class="cover">cover</span></div>
           <button class="btn-sm-music">
             <img src="/assets/svg/play.svg" alt="" />
           </button>
@@ -52,16 +53,46 @@
         <section class="playlist__track">
           <img class="sm-cover" src="/assets/pictures/sirens-call.png" alt="" />
           <h4>Titre du morceau</h4>
-          <div class="performer">Interprète</div>
+          <div class="performer">PERFORMER</div>
+          <div class="cover">Cover by <span class="cover">cover</span></div>
           <button class="btn-sm-music">
             <img src="/assets/svg/play.svg" alt="" />
           </button>
         </section>
       </article>
-      <article class="playlist">
-        <h3>Animation</h3>
+      <article id="animation" class="playlist">
+        <div class="playlist__header">
+          <div class="playlist__recordCover">
+            <img
+              class="md-cover"
+              src="/assets/pictures/le-dernier-jour-du-disco.png"
+              alt=""
+            />
+            <img
+              class="md-cover"
+              src="/assets/pictures/sirens-call.png"
+              alt=""
+            />
+            <img
+              class="md-cover"
+              src="/assets/pictures/sirens-call.png"
+              alt=""
+            />
+            <img
+              class="md-cover"
+              src="/assets/pictures/le-dernier-jour-du-disco.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <h3>Répertoire d'animation</h3>
+        <div class="playlist__control">
+          <button class="btn-xl-music read">Lecture</button>
+          <button class="btn-xl-music shuffle">Aléatoire</button>
+        </div>
       </article>
     </section>
+    <script src="/assets/js/playlists.js"></script>
     <script src="/assets/js/player.js"></script>
   </body>
 </html>

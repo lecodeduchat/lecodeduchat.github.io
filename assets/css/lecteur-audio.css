@@ -2,7 +2,7 @@
   margin-bottom: 20px;
   text-align: center;
 }
-
+/*----------------------------------------------------------*/
 .playlist__recordCover {
   width: 160px;
   display: inline-flex;
@@ -30,6 +30,7 @@
 .playlist__recordCover img:last-child {
   border-bottom-right-radius: 10px;
 }
+/*-----------------------------------------------------------------*/
 .playlist__control {
   border-bottom: 2px solid #ccc;
   display: inline-flex;
@@ -67,16 +68,21 @@
   top: 9px;
   left: 10px;
 }
-.performer {
+/*---------------------------------------------------------------------- */
+.performer,
+.cover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
   color: #999;
   padding-top: 2px;
   line-height: 20px;
 }
+.cover {
+  padding-top: 0px;
+}
 section.playlist__track {
   position: relative;
-  height: 40px;
+  height: 60px;
   padding: 10px 70px;
   text-align: left;
   display: flex;
@@ -84,7 +90,7 @@ section.playlist__track {
 }
 section.playlist__track > img {
   position: absolute;
-  top: 5px;
+  top: 15px;
   left: 0px;
 }
 section.playlist__track > .btn-sm-music {
@@ -100,6 +106,9 @@ section.playlist__track > .btn-sm-music img {
   width: 20px;
   height: 20px;
 }
+/* section.playlist__track > .btn-sm-music img.pause {
+  display: none;
+} */
 section.playlist__track::after {
   content: "";
   width: 280px;
