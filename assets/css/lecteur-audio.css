@@ -37,6 +37,7 @@
 }
 .btn-xl-music {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #00a3cc;
   position: relative;
   text-transform: uppercase;
   font-weight: bolder;
@@ -46,6 +47,7 @@
   width: 135px;
   height: 40px;
   border-radius: 5px;
+  background: #ccc;
 }
 .btn-xl-music.read {
   padding-right: 18px;
@@ -54,7 +56,7 @@
   content: "";
   width: 18px;
   height: 18px;
-  background: url("../svg/play.svg") no-repeat;
+  background: url("../svg/play-blue.svg") no-repeat;
   position: absolute;
   top: 9px;
   left: 20px;
@@ -82,7 +84,6 @@
 }
 section.playlist__track {
   position: relative;
-  height: 60px;
   padding: 10px 70px;
   text-align: left;
   display: flex;
@@ -117,4 +118,49 @@ section.playlist__track::after {
   position: absolute;
   bottom: 0px;
   right: -5px;
+}
+/*----------------------------------------------------------------------------------*/
+#control {
+  z-index: 5;
+  position: fixed;
+  height: 50px;
+  width: calc(100% - 20px);
+  line-height: 50px;
+  bottom: -1px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  padding: 10px;
+  border-top: 1px solid #aaa;
+}
+#control::before {
+  content: "";
+  position: absolute;
+  padding: 0 3px 0 3px;
+  top: -23px;
+  right: 0px;
+  width: 20px;
+  height: 22px;
+  background: no-repeat center url("../svg/xmark.svg");
+  border: 1px solid #aaa;
+  border-bottom: 0px;
+}
+#control > h4 {
+  padding-left: 10px;
+  height: 50px;
+  line-height: 50px;
+  flex-grow: 1;
+}
+button {
+  border: none;
+  background-color: transparent;
+}
+
+button.control > img {
+  width: 20px;
+  height: 20px;
+}
+button.control > img.play {
+  padding-right: 10px;
 }
