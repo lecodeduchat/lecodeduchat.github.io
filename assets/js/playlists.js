@@ -5,7 +5,7 @@ const arrayTracks = [
     title: "Lumière du jour",
     performer: "Michel Berger",
     cover: "Manu",
-    src: "lumiere-du-jour.mp3",
+    src: "/assets/music/playlist-ambiance/lumiere-du-jour.mp3",
   },
   {
     playlist: "ambiance",
@@ -13,7 +13,7 @@ const arrayTracks = [
     title: "La rivière de notre enfance",
     performer: "Garou & Michel Sardou",
     cover: "Manu, Laurence, Sam et Mélissa",
-    src: "la-riviere-de-notre-enfance.mp3",
+    src: "/assets/music/playlist-ambiance/la-riviere-de-notre-enfance.mp3",
   },
   {
     playlist: "ambiance",
@@ -21,7 +21,7 @@ const arrayTracks = [
     title: "Against all odds",
     performer: "Phil Colins",
     cover: "Laurence et Mélissa",
-    src: "against-all-odds.mp3",
+    src: "/assets/music/playlist-ambiance/against-all-odds.mp3",
   },
   {
     playlist: "ambiance",
@@ -29,7 +29,7 @@ const arrayTracks = [
     title: "Hello",
     performer: "Adèle",
     cover: "Laurence et Mélissa",
-    src: "hello.mp3",
+    src: "/assets/music/playlist-ambiance/hello.mp3",
   },
   {
     playlist: "animation",
@@ -37,7 +37,7 @@ const arrayTracks = [
     title: "Eye in the sky",
     performer: "Alan project",
     cover: "Sam",
-    src: "eye-in-the-sky.mp3",
+    src: "/assets/music/playlist-animation/eye-in-the-sky.mp3",
   },
   {
     playlist: "animation",
@@ -45,6 +45,6 @@ const arrayTracks = [
     title: "Sirens call",
     performer: "Cats and tree",
     cover: "Laurence et Mélissa",
-    src: "sirens-call.mp3",
+    src: "/assets/music/playlist-animation/sirens-call.mp3",
   },
 ];
