@@ -26,12 +26,15 @@ for (let id = 0; id < arrayTracks.length; id++) {
 const buttons = document.querySelectorAll("button.btn-sm-music");
 const control = document.getElementById("control");
 const player = document.getElementById("player");
+const btnNext = document.getElementById("btn-next");
+const btnReadAmbiance = document.getElementById("btn-read-ambiance");
 const iconPause = '<img class="pause" src="/assets/svg/pause.svg" alt=""/>';
 const iconPlay = '<img class="play" src="/assets/svg/play.svg" alt=""/>';
 let btnMain = document.getElementById("btn-main");
 let controlTitle = document.getElementById("control-title");
 let currentSrc = null;
-let currentBtnTrack;
+let currentBtnTrack = buttons[0];
+let nextTrack = [1, buttons[1]];
 
 function pause(btnTrack) {
   player.pause();
@@ -46,13 +49,25 @@ function play(idTrack, btnTrack) {
   controlTitle.textContent = arrayTracks[idTrack].title;
   currentBtnTrack = btnTrack;
 }
-
+function next() {
+  const idNextTrack = parseInt(currentBtnTrack.getAttribute("idTrack")) + 1;
+  const lenghtButtons = buttons.length;
+  if (idNextTrack < lenghtButtons) {
+    const nextBtnTrack = buttons[idNextTrack];
+    currentBtnTrack.innerHTML = iconPlay;
+    play(idNextTrack, nextBtnTrack);
+  } else {
+    play(0, buttons[0]);
+  }
+}
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", () => {
     const idTrack = buttons[i].getAttribute("idTrack");
     const btnTrack = buttons[i];
     currentSrc = player.getAttribute("src");
-
+    const next = i + 1;
+    nextTrack = [buttons[next].getAttribute("idTrack"), buttons[next]];
+    //console.log("idTrack:" + nextTrack[0] + " btnTrack:" + nextTrack[1]);
     if (player.paused) {
       play(idTrack, btnTrack);
     } else if (currentSrc === arrayTracks[idTrack].src) {
@@ -72,4 +87,16 @@ btnMain.addEventListener("click", () => {
   } else {
     pause(currentBtnTrack);
   }
+});
+
+btnNext.addEventListener("click", () => {
+  next();
+});
+
+btnReadAmbiance.addEventListener("click", () => {
+  play(0, buttons[0]);
+});
+player.addEventListener("ended", () => {
+  btnMain.innerHTML = currentBtnTrack.innerHTML = iconPlay;
+  next();
 });

@@ -33,7 +33,7 @@ const arrayTracks = [
   },
   {
     playlist: "animation",
-    order: 1,
+    order: 101,
     title: "Eye in the sky",
     performer: "Alan project",
     cover: "Sam",
@@ -41,10 +41,23 @@ const arrayTracks = [
   },
   {
     playlist: "animation",
-    order: 2,
+    order: 102,
     title: "Sirens call",
     performer: "Cats and tree",
     cover: "Laurence et Mélissa",
     src: "/assets/music/playlist-animation/sirens-call.mp3",
   },
 ];
+arrayTracks.sort((a, b) => a.order - b.order);
+// PLAYLISTS
+const playlistAmbiance = [];
+const playlistAnimation = [];
+arrayTracks.forEach((elt) => {
+  if (elt.playlist === "ambiance") {
+    playlistAmbiance.push(elt);
+  } else {
+    playlistAnimation.push(elt);
+  }
+});
+playlistAmbiance.sort((a, b) => a.order - b.order);
+playlistAnimation.sort((a, b) => a.order - b.order);
