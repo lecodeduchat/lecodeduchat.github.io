@@ -4,47 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connivence</title>
+    <link rel="shortcut icon" href="/connivence/assets/img/lettre-c.png" />
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.css" media="all" />
     <link
       rel="stylesheet"
-      href="../assets/fontawesome/css/all.css"
+      href="/connivence/assets/css/styles.css"
       media="all"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" media="all" />
     <link
       rel="stylesheet"
-      href="assets/css/styles-md.css"
-      media="(min-width:48rem)"
+      href="/connivence/assets/css/lecteur-audio.css"
+      media="all"
     />
     <link
       rel="stylesheet"
-      href="assets/css/styles-lg.css"
-      media="(min-width:75rem)"
+      href="/connivence/assets/css/styles-md.css"
+      media="all"
     />
-    <link
-      rel="shortcut icon"
-      type="image/ico"
-      href="assets/pictures/favicon-patte.ico"
-    />
-    <title>Connivence</title>
   </head>
   <body>
     <header>
-      <section id="header">
+      <section id="header" class="content">
         <h1 class="header__logo">
           <a href="#home"
             ><img
-              src="/assets/img/connivence-logo-.png"
+              src="/connivence/assets/img/connivence-logo-.png"
               alt="logo du groupe musical connivence"
           /></a>
         </h1>
         <nav class="header__menu">
           <button id="burger-menu">
-            <span class="fa-solid fa-bars">menu</span>
+            <span class="fa-solid fa-bars"></span>
           </button>
           <div id="header__menu-content">
             <div class="header__menu-header">
-              <span>MENU</span>
-              <span class="fa-solid fa-xmark"></span>
+              <span class="menu__title">MENU</span>
+              <span
+                id="header__menu-header-close"
+                class="fa-solid fa-xmark"
+              ></span>
             </div>
             <ul>
               <li class="nav-item">
@@ -61,12 +60,15 @@
     </header>
     <main>
       <div id="home">
-        <img src="/assets/img/scene-instruments.png" alt="scène de spectacle" />
+        <img
+          src="/connivence/assets/img/scene-instruments.png"
+          alt="scène de spectacle"
+        />
         <div class="home__slider">
           <figure>
-            <div class="home_slider-item">Animation soirée.</div>
-            <div class="home_slider-item">Musique d'ambiance.</div>
-            <div class="home_slider-item">Spectacle.</div>
+            <div class="home__slider-item">Animation soirée.</div>
+            <div class="home__slider-item">Musique d'ambiance.</div>
+            <div class="home__slider-item">Spectacle.</div>
           </figure>
         </div>
       </div>
@@ -76,13 +78,106 @@
         <section class="aboutwe__members"></section>
       </article>
       <article id="music">
-        <h2>Musique</h2>
+        <h2 id="music__title">Musique</h2>
+        <article id="ambiance" class="playlist">
+          <div class="playlist__header">
+            <div class="playlist__recordCover">
+              <img
+                class="md-cover"
+                src="/connivence/assets/img/le-dernier-jour-du-disco.png"
+                alt=""
+              />
+              <img
+                class="md-cover"
+                src="/connivence/assets/img/sirens-call.png"
+                alt=""
+              />
+              <img
+                class="md-cover"
+                src="/connivence/assets/img/sirens-call.png"
+                alt=""
+              />
+              <img
+                class="md-cover"
+                src="/connivence/assets/img/le-dernier-jour-du-disco.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <h3>Répertoire d'ambiance</h3>
+          <div class="playlist__control">
+            <button id="btn-read-ambiance" class="btn-xl-music read">
+              Lecture
+            </button>
+            <button id="btn-shuffle-ambiance" class="btn-xl-music shuffle">
+              Aléatoire
+            </button>
+          </div>
+        </article>
+        <article id="animation" class="playlist">
+          <div class="playlist__header">
+            <div class="playlist__recordCover">
+              <img
+                class="md-cover"
+                src="/connivence/assets/img/le-dernier-jour-du-disco.png"
+                alt=""
+              />
+              <img
+                class="md-cover"
+                src="/connivence/assets/img/sirens-call.png"
+                alt=""
+              />
+              <img
+                class="md-cover"
+                src="/connivence/assets/img/sirens-call.png"
+                alt=""
+              />
+              <img
+                class="md-cover"
+                src="/connivence/assets/img/le-dernier-jour-du-disco.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <h3>Répertoire d'animation</h3>
+          <div class="playlist__control">
+            <button class="btn-xl-music read">Lecture</button>
+            <button class="btn-xl-music shuffle">Aléatoire</button>
+          </div>
+        </article>
+        <article id="control">
+          <div id="close-control">
+            <img src="/assets/svg/xmark.svg" alt="" />
+          </div>
+          <audio
+            src="/assets/music/playlist-ambiance/lumiere-du-jour.mp3"
+            id="player"
+          ></audio>
+          <img
+            class="sm-cover control-cover"
+            src="/connivence/assets/img/sirens-call.png"
+            alt=""
+          />
+          <h4 id="control-title">Lumière du jour</h4>
+          <button id="btn-main" class="control" idTrack="1">
+            <img class="play" src="/assets/svg/play.svg" alt="" />
+          </button>
+          <button id="btn-next" class="control">
+            <img class="next" src="/assets/svg/forward.svg" alt="" />
+          </button>
+        </article>
       </article>
     </main>
     <footer>
       <article id="contact">
         <h2>Nous contacter</h2>
       </article>
+      <section>
+        <h2><a href="/index.html">Le Code Du Chat</a></h2>
+      </section>
     </footer>
+    <script src="/connivence/assets/js/script.js"></script>
+    <script src="/connivence/assets/js/playlists.js"></script>
+    <script src="/connivence/assets/js/player.js"></script>
   </body>
 </html>

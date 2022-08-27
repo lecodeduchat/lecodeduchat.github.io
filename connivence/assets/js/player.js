@@ -6,7 +6,7 @@ arrayTracks.forEach((elt) => {
   const track = document.createElement("section");
   track.classList.add("playlist__track");
   track.innerHTML = `
-    <img class="sm-cover" src="/assets/pictures/sirens-call.png" alt="" />
+    <img class="sm-cover" src="/connivence/assets/img/sirens-call.png" alt="" />
     <h4>${elt.title}</h4>
     <div class="performer">${elt.performer}</div>
     <div class="cover">Cover by ${elt.cover}</div>

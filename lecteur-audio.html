@@ -41,7 +41,9 @@
           <button id="btn-read-ambiance" class="btn-xl-music read">
             Lecture
           </button>
-          <button class="btn-xl-music shuffle">Aléatoire</button>
+          <button id="btn-shuffle-ambiance" class="btn-xl-music shuffle">
+            Aléatoire
+          </button>
         </div>
       </article>
       <article id="animation" class="playlist">
@@ -76,6 +78,7 @@
         </div>
       </article>
       <article id="control">
+        <div id="close-control"><img src="/assets/svg/xmark.svg" alt="" /></div>
         <audio
           src="/assets/music/playlist-ambiance/lumiere-du-jour.mp3"
           id="player"
@@ -86,7 +89,7 @@
           alt=""
         />
         <h4 id="control-title">Lumière du jour</h4>
-        <button id="btn-main" class="control" idTrack="0">
+        <button id="btn-main" class="control" idTrack="1">
           <img class="play" src="/assets/svg/play.svg" alt="" />
         </button>
         <button id="btn-next" class="control">

@@ -40,17 +40,17 @@ const arraySkills = [
   },
 ];
 
-for (let elt in arraySkills) {
+arraySkills.forEach((elt) => {
   const skill = document.createElement("article");
   skill.classList.add("skills__item");
   skill.classList.add("content");
   skill.innerHTML = `
-        <span class="skills__item-icon fa-solid ${arraySkills[elt].icon}"></span>
-        <h3 class="skills__item-title">${arraySkills[elt].title}</h3>
-        <p class="skills__item-info">${arraySkills[elt].info}</p>
+        <span class="skills__item-icon fa-solid ${elt.icon}"></span>
+        <h3 class="skills__item-title">${elt.title}</h3>
+        <p class="skills__item-info">${elt.info}</p>
         `;
   skillsContent.appendChild(skill);
-}
+});
 
 // Ajout d'images d'icon pour css et js qui sont en version payante dans fontawesome!!!!
 const iconCss = document.querySelector(".icon-css");

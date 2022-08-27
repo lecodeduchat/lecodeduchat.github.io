@@ -443,6 +443,9 @@ p.myname span {
   background-color: var(--darkcolor);
   color: #fff;
 }
+#hobbies a:hover {
+  color: var(--md-3-color);
+}
 .hobbies {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,34 @@
+@media (min-width: 48rem) {
+  /** HEADER FIXE *************************************************/
+  #header__menu-content {
+    width: calc(24rem - var(--md-sp));
+    right: -600px;
+  }
+  #header__menu-content::after {
+    bottom: 30px;
+    border-left: 384px solid white;
+    border-bottom: 20px solid transparent;
+  }
+  #home > img {
+    max-width: 369px;
+    position: absolute;
+    top: 70px;
+    left: 70px;
+  }
+  .home__slider {
+    position: absolute;
+    width: 100%;
+    top: 260px;
+    left: 509px;
+    height: 100%;
+  }
+  .home__slider-item {
+    padding-left: 0px;
+  }
+}
+/** MUSIC **********************************************************/
+#ambiance,
+#animation {
+  width: 50%;
+  margin: 64px auto;
+}

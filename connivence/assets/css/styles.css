@@ -1,6 +1,6 @@
 /** variables du thème *************************************************/
 :root {
-  --bluecolor: #1fcdff;
+  --bluecolor: #01cdff;
   --browncolor: #a9716c;
   --sm-sp: 16px;
   --md-sp: 32px;
@@ -14,7 +14,24 @@
 body {
   font-family: Open sans, Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  height: 100%;
+}
+
+.content {
+  margin: 0px var(--sm-sp);
+}
+h2 {
+  font-family: Merienda;
+  font-size: 24px;
+  margin: 0 var(--sp);
+  padding: var(--lg-sp) 0;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+  padding: var(--sp);
+  font-family: Merienda;
+  font-style: normal;
+  font-weight: bold;
 }
 /** POLICES DU SITE ****************************************************/
 @font-face {
@@ -25,29 +42,262 @@ body {
   font-family: "Century gothic";
   src: "../fonts/GOTHICB.TTF";
 }
+@font-face {
+  font-family: "Merienda";
+  src: url("/assets/fonts/Merienda-Regular.ttf");
+}
+@font-face {
+  font-family: "Merienda";
+  font-weight: bold;
+  src: url("/assets/fonts/Merienda-Bold.ttf");
+}
 /** HEADER *************************************************************/
-#header {
+header {
+  z-index: 2;
+  background-color: black;
+  width: 100%;
   position: fixed;
+  top: 0px;
+  left: 0px;
   height: 70px;
+}
+#header {
   line-height: 70px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 .header__logo {
-  width: 200px;
-  flex-grow: 0;
+  flex-grow: 1;
+  height: 70px;
 }
 .header__logo img {
-  width: 200px;
+  max-height: 70px;
 }
 #header__menu {
-  flex-grow: 1;
-  background-color: green;
+  flex-grow: 0;
+}
+#burger-menu {
+  background: none;
+  border: none;
+  color: white;
+  padding-right: var(--sm-sp);
+}
+#burger-menu:hover {
+  cursor: pointer;
 }
 #header__menu-content {
-  display: none;
+  position: absolute;
+  height: 200px;
+  width: calc(50% - var(--md-sp));
+  top: 0px;
+  right: -600px;
+  background-color: white;
+  color: var(--browncolor);
+  padding: 0px var(--sm-sp);
+  line-height: 50px;
+  transition: 0.6s;
+}
+#header__menu-content::after {
+  content: "";
+  font-size: 0px;
+  z-index: -1;
+  border-left: 200px solid white;
+  border-bottom: 20px solid transparent;
+  position: relative;
+  bottom: 32px;
+  right: 16px;
+}
+#header__menu-content > ul {
+  list-style: none;
+}
+#header__menu-content a {
+  color: var(--browncolor);
+  text-decoration: none;
+}
+.header__menu-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header__menu-header span.menu__title {
+  flex-grow: 1;
+}
+.header__menu-header span.fa-solid {
+  width: 20px;
+  padding-top: var(--sm-sp);
+}
+.header__menu-header span.fa-solid:hover {
+  cursor: pointer;
 }
 /** HOME ***************************************************************/
 #home {
-  background-image: url(/assets/img/bg-dark-wood.jpg);
+  position: relative;
+  margin-top: 70px;
+  width: 100%;
+  height: 70vh;
+  background-image: url(../img/bg-dark-wood.jpg);
 }
+#home > img {
+  width: 100%;
+}
+.home__slider {
+  position: absolute;
+  width: 100%;
+  top: 180px;
+  left: 0px;
+  height: 100%;
+  color: white;
+  overflow: hidden;
+}
+.home__slider figure {
+  position: absolute;
+  width: 300%;
+  display: inline-flex;
+  flex-direction: row;
+  animation: 15s slidy infinite;
+}
+.home__slider-item {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  font-size: 1.8rem;
+  padding-left: var(--sm-sp);
+}
+.home__slider-item::first-letter {
+  color: var(--bluecolor);
+}
+.home__slider-item:first-child {
+  animation: 15s slide-one infinite;
+}
+.home__slider-item:nth-of-type(2) {
+  animation: 15s slide-two infinite;
+}
+.home__slider-item:last-child {
+  animation: 15s slide-three infinite;
+}
+@keyframes slide-one {
+  0% {
+    left: 0%;
+    opacity: 1;
+  }
+  30% {
+    left: 0%;
+    opacity: 1;
+  }
+  33.33% {
+    left: -100%;
+    opacity: 1;
+  }
+  63% {
+    left: -100%;
+    opacity: 0;
+  }
+  66.66% {
+    left: 100%;
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+    opacity: 1;
+  }
+}
+@keyframes slide-two {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  30% {
+    left: 100%;
+    opacity: 1;
+  }
+  33.33% {
+    left: 0%;
+    opacity: 1;
+  }
+  63% {
+    left: 0%;
+    opacity: 1;
+  }
+  66.66% {
+    left: -100%;
+    opacity: 1;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+@keyframes slide-three {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  30% {
+    left: -100%;
+    opacity: 0;
+  }
+  33.33% {
+    left: 100%;
+    opacity: 0;
+  }
+  63% {
+    left: 100%;
+    opacity: 1;
+  }
+  66.66% {
+    left: 0%;
+    opacity: 1;
+  }
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
+}
+/* @keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  33.33% {
+    left: 0%;
+  }
+  38.33% {
+    left: -100%;
+  }
+  71.66% {
+    left: -100%;
+  }
+  76.66% {
+    left: -200%;
+  }
+  100% {
+    left: -200%;
+  }
+} */
+/** MUSIQUE ************************************************************/
+#music__title {
+  color: white;
+  margin: 0;
+  padding: var(--md-sp) 0px;
+  background-image: url(../img/bg-dark-wood.jpg);
+}
+/* #music__title::before {
+  content: "";
+  font-size: 0px;
+  border-left: 375px solid white;
+  border-bottom: 20px solid transparent;
+  top: -59px;
+  left: 0px;
+  position: relative;
+}*/
+/* #music__title:after {
+  content: "";
+  font-size: 0px;
+  border-right: 375px solid white;
+  border-top: 20px solid transparent;
+  bottom: -40px;
+  left: -20px;
+  position: relative;
+} */
