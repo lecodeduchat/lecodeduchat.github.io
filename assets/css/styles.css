@@ -9,6 +9,7 @@
   --color-bg-light: rgba(220, 158, 130, 0.5);
   --sp: 16px;
   --lg-sp: 32px;
+  --heightTimeLine: 1000px;
 }
 @font-face {
   font-family: "Merienda";
@@ -214,7 +215,7 @@ h1 span {
 /** WHO I AM ***************************************************************/
 #whoiam {
   margin-top: 70px;
-  background-color: var(--md-1-color);
+  background-color: #000;
   color: white;
   height: 100%;
 }
@@ -248,6 +249,7 @@ p.myname span {
 }
 .whoiam h2 {
   margin: 0;
+  padding-top: 0;
   padding-bottom: var(--sp);
   font-size: 20px;
 }

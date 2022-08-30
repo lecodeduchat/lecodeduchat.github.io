@@ -83,6 +83,8 @@ setInterval(noteMaker, 500);
 //----------------------------------------------------------------------
 // Adapter la timeline en fonction de l'écran de l'utilisateur
 const careerContent = document.querySelector("div.career.content");
-const heightTimeLine = careerContent.clientHeight - 98 + "px"; // je soustrais la hauteur du h2 de 98px
-const careerTimeLine = document.querySelector(".career__timeline");
-careerTimeLine.style.setProperty("--heightTimeLine", heightTimeLine);
+const heightTimeLine = careerContent.clientHeight - 91 + "px"; // je soustrais la hauteur du h2 de 98px - 7px
+const careerTimeLineLeft = document.querySelector(".career__timeline.left");
+careerTimeLineLeft.style.setProperty("--heightTimeLine", heightTimeLine);
+const careerTimeLineRight = document.querySelector(".career__timeline.right");
+careerTimeLineRight.style.setProperty("--heightTimeLine", heightTimeLine);
