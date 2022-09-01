@@ -22,6 +22,11 @@
       href="/connivence/assets/css/styles-md.css"
       media="all"
     />
+    <link
+      rel="stylesheet"
+      href="/connivence/assets/css/styles-lg.css"
+      media="all"
+    />
   </head>
   <body>
     <header>
@@ -72,14 +77,54 @@
           </figure>
         </div>
       </div>
-      <article id="aboutwe">
+      <section id="aboutwe" class="content">
         <h2>Le groupe musical CONNIVENCE</h2>
-        <section class="aboutwe__history"></section>
-        <section class="aboutwe__members"></section>
-      </article>
+        <article class="aboutwe content">
+          <h3>Notre histoire</h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ab
+          laborum quaerat sunt similique, earum nemo libero beatae laboriosam
+          rerum corporis quasi fugiat id aspernatur, perferendis provident
+          placeat consequuntur incidunt eius atque? Asperiores reprehenderit
+          atque adipisci incidunt culpa itaque rerum optio ab? Quod,
+          necessitatibus ullam adipisci quibusdam veniam nesciunt. Voluptates!
+        </article>
+        <article class="aboutwe content">
+          <h3>Nos membres</h3>
+          <div id="aboutwe__members">
+            <div class="aboutwe__member">
+              <img src="/connivence/assets/img/member.jpg" alt="Manu" />
+              <h4>Manu</h4>
+              <div class="aboutwe__member-instrument">
+                Piano, guitare et chant.
+              </div>
+            </div>
+            <div class="aboutwe__member">
+              <img src="/connivence/assets/img/member.jpg" alt="Sam" />
+              <h4>Sam</h4>
+              <div class="aboutwe__member-instrument">
+                Batterie, guitare et chant.
+              </div>
+            </div>
+            <div class="aboutwe__member">
+              <img src="/connivence/assets/img/member.jpg" alt="Manu" />
+              <h4>Manu</h4>
+              <div class="aboutwe__member-instrument">
+                Piano, guitare et chant.
+              </div>
+            </div>
+            <div class="aboutwe__member">
+              <img src="/connivence/assets/img/member.jpg" alt="Sam" />
+              <h4>Sam</h4>
+              <div class="aboutwe__member-instrument">
+                Batterie, guitare et chant.
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
       <article id="music">
         <h2 id="music__title">Musique</h2>
-        <article id="ambiance" class="playlist">
+        <article id="ambiance" class="playlist content">
           <div class="playlist__header">
             <div class="playlist__recordCover">
               <img
@@ -114,7 +159,7 @@
             </button>
           </div>
         </article>
-        <article id="animation" class="playlist">
+        <article id="animation" class="playlist content">
           <div class="playlist__header">
             <div class="playlist__recordCover">
               <img
@@ -141,8 +186,12 @@
           </div>
           <h3>Répertoire d'animation</h3>
           <div class="playlist__control">
-            <button class="btn-xl-music read">Lecture</button>
-            <button class="btn-xl-music shuffle">Aléatoire</button>
+            <button id="btn-read-animation" class="btn-xl-music read">
+              Lecture
+            </button>
+            <button id="btn-shuffle-animation" class="btn-xl-music shuffle">
+              Aléatoire
+            </button>
           </div>
         </article>
         <article id="control">

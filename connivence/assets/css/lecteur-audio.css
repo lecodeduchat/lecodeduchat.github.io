@@ -2,6 +2,9 @@
   margin-bottom: 20px;
   text-align: center;
 }
+.playlist__header {
+  padding-top: var(--md-sp);
+}
 /*----------------------------------------------------------*/
 .playlist__recordCover {
   width: 160px;
@@ -34,6 +37,10 @@
 .playlist__control {
   border-bottom: 2px solid #ccc;
   display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 90px;
 }
 .btn-xl-music {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -112,12 +119,12 @@ section.playlist__track > .btn-sm-music img {
 } */
 section.playlist__track::after {
   content: "";
-  width: 280px;
+  width: 100%;
   height: 1px;
   background-color: #ccc;
   position: absolute;
   bottom: 0px;
-  right: -5px;
+  right: 0px;
 }
 /*----------------------------------------------------------------------------------*/
 #control {

@@ -22,16 +22,20 @@ body {
 h2 {
   font-family: Merienda;
   font-size: 24px;
-  margin: 0 var(--sp);
-  padding: var(--lg-sp) 0;
+  margin: 0 var(--sm-sp);
+  padding: var(--md-sp) 0;
   text-align: center;
 }
 h3 {
   text-align: center;
-  padding: var(--sp);
+  padding: var(--sm-sp);
   font-family: Merienda;
   font-style: normal;
   font-weight: bold;
+}
+a:hover,
+button:hover {
+  cursor: pointer;
 }
 /** POLICES DU SITE ****************************************************/
 @font-face {
@@ -81,7 +85,7 @@ header {
   background: none;
   border: none;
   color: white;
-  padding-right: var(--sm-sp);
+  /* padding-right: var(--sm-sp); */
 }
 #burger-menu:hover {
   cursor: pointer;
@@ -136,11 +140,13 @@ header {
   position: relative;
   margin-top: 70px;
   width: 100%;
-  height: 70vh;
+  /* height: 70vh; */
   background-image: url(../img/bg-dark-wood.jpg);
 }
 #home > img {
   width: 100%;
+  max-height: 244px;
+  max-width: 369px;
 }
 .home__slider {
   position: absolute;
@@ -276,6 +282,29 @@ header {
     left: -200%;
   }
 } */
+/** ABOUT WE ***********************************************************/
+#aboutwe {
+  padding-bottom: var(--md-sp);
+}
+#aboutwe__members {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.aboutwe__member {
+  /* background-color: teal; */
+  width: 49%;
+  text-align: center;
+  padding-bottom: var(--sm-sp);
+}
+.aboutwe__member img {
+  width: 100%;
+}
+.aboutwe__member-instrument {
+  padding: 0 var(--sm-sp);
+  font-style: italic;
+}
 /** MUSIQUE ************************************************************/
 #music__title {
   color: white;
@@ -301,3 +330,10 @@ header {
   left: -20px;
   position: relative;
 } */
+/** FOOTER ****************************************************************/
+footer {
+  background-image: url(../img/bg-dark-wood.jpg);
+}
+#contact {
+  color: white;
+}
