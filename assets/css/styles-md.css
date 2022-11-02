@@ -50,11 +50,21 @@
     flex-direction: column;
     justify-content: flex-start;
   }
+  .skills__item:hover {
+    cursor: pointer;
+    transform: translate(-3px, -3px);
+    border: 1px solid rgba(var(--color-bg-light), 0.5);
+    box-shadow: 3px 3px 10px rgba(var(--color-bg-light), 0.5);
+  }
+
   .skills__item-icon {
     display: block;
     text-align: center;
     padding-left: var(--sp);
     padding-bottom: 0px;
+  }
+  .skills__item-icon:hover {
+    cursor: pointer;
   }
   .skills__item-title span {
     display: none;
@@ -144,6 +154,11 @@
   .footer__links-item a:hover {
     text-decoration: underline;
     color: var(--md-2-color);
+  }
+  .social__link i:hover {
+    color: var(--md-2-color);
+    transform: scale(1.5);
+    transition: all 0.3s linear;
   }
   /** LEGAL NOTICES *******************************************************************************/
   #legal-notices {

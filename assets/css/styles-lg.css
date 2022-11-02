@@ -89,6 +89,9 @@
     background-color: transparent;
     margin-bottom: var(--lg-sp);
   }
+  .skills__item:hover {
+    width: calc(25% - 70px);
+  }
   .skills__item p {
     padding: 0 var(--sp);
   }
@@ -112,6 +115,32 @@
     );
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   }
+  /*  .skills__item:hover::before {
+    width: 190px;
+    height: 190px;
+    background-color: rgba(var(--color-bg-dark), 1);
+  }
+  .skills__item:hover::after {
+    z-index: -2;
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 193px;
+    height: 193px;
+    background-color: rgba(var(--color-bg-light), 0.2);
+    transform: translate(-50%, -50%);
+    -webkit-clip-path: polygon(
+      50% 0,
+      100% 25%,
+      100% 75%,
+      50% 100%,
+      0 75%,
+      0 25%
+    );
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  } */
+
   /** CAREER ********************************************************************************/
   .career__period-info,
   .career__period-date {

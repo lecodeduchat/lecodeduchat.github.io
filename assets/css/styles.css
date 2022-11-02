@@ -6,7 +6,7 @@
   --md-1-color: #576066;
   --md-2-color: #96b3c2;
   --md-3-color: #e4626f;
-  --color-bg-light: rgba(220, 158, 130, 0.5);
+  --color-bg-light: 220, 158, 130;
   --sp: 16px;
   --lg-sp: 32px;
   --heightTimeLine: 1000px;
@@ -255,7 +255,8 @@ p.myname span {
 }
 /** skills **************************************************************/
 #skills {
-  z-index: -2;
+  /* Bloque le hover du block skills */
+  z-index: 0;
   background-color: var(--darkcolor);
   background-image: url(../pictures/diagmonds.png);
   padding-bottom: var(--sp);
@@ -280,7 +281,6 @@ p.myname span {
   margin-bottom: var(--sp);
   border-radius: 2%;
 }
-
 .skills__item-icon {
   display: inline-block;
   font-size: 24px;
@@ -296,7 +296,7 @@ p.myname span {
 }
 /**  career ********************************************************/
 #career {
-  background-color: var(--color-bg-light);
+  background-color: rgba(var(--color-bg-light), 0.5);
   padding-bottom: var(--sp);
 }
 .career__timeline {
