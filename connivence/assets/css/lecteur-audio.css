@@ -63,7 +63,7 @@
   content: "";
   width: 18px;
   height: 18px;
-  background: url("../svg/play-blue.svg") no-repeat;
+  background: url("/connivence/assets/svg/play.svg") no-repeat;
   position: absolute;
   top: 11px;
   left: 20px;
