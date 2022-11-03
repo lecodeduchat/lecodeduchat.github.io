@@ -65,16 +65,16 @@
   height: 18px;
   background: url("../svg/play-blue.svg") no-repeat;
   position: absolute;
-  top: 9px;
+  top: 11px;
   left: 20px;
 }
 .btn-xl-music.shuffle::before {
   content: "";
   width: 18px;
   height: 18px;
-  background: url("../svg/shuffle.svg");
+  background: url("/connivence/assets/svg/shuffle-blue.svg");
   position: absolute;
-  top: 9px;
+  top: 11px;
   left: 10px;
 }
 /*---------------------------------------------------------------------- */
