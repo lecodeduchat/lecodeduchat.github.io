@@ -10,14 +10,14 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family: Open sans, Arial, Helvetica, sans-serif;
   font-size: 1rem;
 }
-
 .content {
-  margin: 0px var(--sm-sp);
+  padding: 0px var(--sm-sp);
 }
 h2 {
   font-family: Merienda;
@@ -36,6 +36,26 @@ h3 {
 a:hover,
 button:hover {
   cursor: pointer;
+}
+.border {
+  width: 100%;
+  position: relative;
+}
+.border::before {
+  content: "";
+  border-top: 50px solid transparent;
+  border-bottom: 0px solid white;
+  border-right: 100vw solid white;
+  position: absolute;
+  top: -49px;
+  right: 0px;
+}
+.border::after {
+  content: "";
+  position: absolute;
+  border-bottom: 50px solid transparent;
+  border-top: 0px solid white;
+  border-left: 100vw solid white;
 }
 /** POLICES DU SITE ****************************************************/
 @font-face {
@@ -140,18 +160,52 @@ header {
   position: relative;
   margin-top: 70px;
   width: 100%;
-  /* height: 70vh; */
+  height: 30vh;
   background-image: url(../img/bg-dark-wood.jpg);
 }
-#home > img {
-  width: 100%;
-  max-height: 244px;
-  max-width: 369px;
+.home__picture {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 var(--sm-sp);
 }
+.home__picture .pers img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.home__picture .pers {
+  width: 70px;
+  margin-top: 100px;
+}
+@keyframes jump {
+  from {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+.home__picture .pers:nth-of-type(1) {
+  animation: jump 3s 0s ease-in infinite;
+}
+.home__picture .pers:nth-of-type(2) {
+  animation: jump 3s 0.5s ease-in infinite;
+}
+.home__picture .pers:nth-of-type(3) {
+  animation: jump 3s 1s ease-in infinite;
+}
+.home__picture .pers:nth-of-type(4) {
+  animation: jump 3s 1.5s ease-in infinite;
+}
+
 .home__slider {
   position: absolute;
   width: 100%;
-  top: 180px;
+  top: 200px;
   left: 0px;
   height: 100%;
   color: white;
@@ -170,7 +224,7 @@ header {
   left: 0px;
   width: 100%;
   font-size: 1.8rem;
-  padding-left: var(--sm-sp);
+  padding-left: var(--md-sp);
 }
 .home__slider-item::first-letter {
   color: var(--bluecolor);
@@ -284,6 +338,7 @@ header {
 } */
 /** ABOUT WE ***********************************************************/
 #aboutwe {
+  position: relative;
   padding-bottom: var(--md-sp);
 }
 #aboutwe__members {
