@@ -1,38 +1,73 @@
 @media (min-width: 48rem) {
   /** HEADER FIXE *************************************************/
+  header {
+    background-color: transparent;
+  }
+  .header__menu {
+    width: 100%;
+  }
+  #burger-menu {
+    display: none;
+  }
+  .header__menu-header {
+    display: none;
+  }
   #header__menu-content {
-    width: calc(24rem - var(--md-sp));
-    right: -600px;
+    position: relative;
+    right: 0px;
+    width: 100%;
+    background-color: transparent;
   }
   #header__menu-content::after {
-    bottom: 30px;
-    border-left: 384px solid white;
-    border-bottom: 20px solid transparent;
+    display: none;
+  }
+  #header__menu-content ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 70px;
+  }
+  #header__menu-content ul a {
+    line-height: 70px;
+    color: white;
+    padding: var(--sm-sp);
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  #header__menu-content ul li::first-letter {
+    font-size: 18px;
+  }
+  #header__menu-content ul li:first-child a {
+    color: var(--bluecolor);
   }
   /** HOME **********************************************************/
   #home {
-    min-height: 400px;
+    margin-top: 0;
+    min-height: 500px;
   }
-  #home > img {
-    position: absolute;
-    top: 40px;
-    left: 40px;
+  .home__picture {
+    padding-top: 70px;
   }
-  /*   .home__slider {
-    position: absolute;
-    width: 100%;
-    top: 240px;
-    left: 449px;
-    height: 100%;
-  } */
+  .home__picture .pers {
+    width: 100px;
+    margin-top: 100px;
+  }
+  .home__slider {
+    top: 320px;
+  }
   .home__slider-item {
-    padding-left: 0px;
+    padding-left: 64px;
   }
   /** ABOUT WE *******************************************************/
   .aboutwe__member {
-    width: 24%;
+    width: 23%;
   }
   /** MUSIC **********************************************************/
+  #music__title {
+    padding: 70px 0;
+    height: 200px;
+    line-height: 60px; /* height - 2*padding */
+  }
   #ambiance,
   #animation {
     width: 80%;

@@ -1,11 +1,42 @@
 @media (min-width: 62rem) {
   /** GLOBAL **************************************************************************/
-  #header {
-    max-width: 1280px;
-    margin: auto;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  /** HOME **********************************************************/
+  #home {
+    min-height: 600px;
   }
   /** ABOUT WE*************************************************************************/
   #aboutwe {
     text-align: center;
+    width: 100vw;
+  }
+  #aboutwe h2 {
+    width: 100%;
+    /* display: inline-block; */
+  }
+  .aboutwe {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 32px);
+  }
+  .aboutwe.history {
+    padding: var(--lg-sp);
+  }
+  #aboutwe__member {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .aboutwe__member {
+    width: 48%;
+  }
+  /** MUSIC **********************************************************/
+  #music__title {
+    padding: 70px 0;
+    height: 250px;
+    line-height: 110px; /* height - 2*padding */
   }
 }

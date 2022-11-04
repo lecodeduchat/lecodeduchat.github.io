@@ -1,8 +1,22 @@
 @media (min-width: 36rem) {
-  h1 {
-    color: yellow;
+  /** 36rem = 576px */
+  /** SKILLS *************************************************************************************/
+  .skills__item {
+    width: calc(33% - 64px);
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
-  #skills {
-    background-color: var(--darkcolor);
+  .skills__item:hover {
+    cursor: pointer;
+    width: calc(33% - 66px);
+    min-height: 187px;
+    border: 1px solid rgba(var(--color-bg-light), 0.5);
+    box-shadow: 3px 3px 10px rgba(var(--color-bg-light), 0.5);
+  }
+  /** HOBBIES ************************************************************************************/
+  #hobby-music:hover {
+    cursor: pointer;
   }
 }
