@@ -15,8 +15,7 @@ function generateColor() {
   let color = [tabColors[num].name, tabColors[num].hex];
   return color;
 }
-
-generate.addEventListener("click", () => {
+function newPalette() {
   colors.forEach((color) => {
     let colorInfoName = color.querySelector(".color_info-name");
     let colorInfoHexa = color.querySelector(".color_info-hexa");
@@ -25,4 +24,14 @@ generate.addEventListener("click", () => {
     colorInfoHexa.textContent = newColor[1];
     color.style.backgroundColor = newColor[1];
   });
+}
+
+// Création aléatoire d'une nouvelle palette de couleurs au touch ou avec la barre d'espace
+generate.addEventListener("click", () => {
+  newPalette();
+});
+document.addEventListener("keydown", function (event) {
+  if (event.code === "Space") {
+    newPalette();
+  }
 });
