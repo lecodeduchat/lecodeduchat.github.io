@@ -99,9 +99,20 @@
     justify-content: start;
     margin-bottom: 32px;
   }
+  .color_tools:hover {
+    cursor: pointer;
+  }
   .color_tools i {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
     padding: 6px;
     color: black;
+    text-align: center;
+    border-radius: 5px;
+  }
+  .color_tools i:hover {
+    background-color: #ddd;
   }
 }
 @media screen and (min-width: 68rem) {

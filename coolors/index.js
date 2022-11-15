@@ -31,7 +31,6 @@ function newPalette() {
     }
   });
 }
-
 // Création aléatoire d'une nouvelle palette de couleurs au touch ou avec la barre d'espace
 btnGenerate.addEventListener("click", () => {
   newPalette();
@@ -40,4 +39,15 @@ document.addEventListener("keydown", function (event) {
   if (event.code === "Space") {
     newPalette();
   }
+});
+// drag et drop des couleurs
+const divColors = document.querySelectorAll(".color");
+const moveColors = document.querySelectorAll(".fa-arrows-up-down");
+
+moveColors.forEach((elt) => {
+  elt.addEventListener("click", (e) => {
+    let id = e.target.getAttribute("data-index");
+    const divColor = document.querySelectorAll(`.color[data-index="${id}"]`);
+    console.log(divColor);
+  });
 });
