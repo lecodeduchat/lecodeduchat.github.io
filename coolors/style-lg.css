@@ -1,0 +1,112 @@
+/* -------- 62rem = 992px --------- */
+@media screen and (min-width: 48rem) {
+  #menu_top,
+  #generate {
+    display: none;
+  }
+
+  #menu_tools {
+    position: initial;
+    display: flex;
+  }
+  .hidden {
+    display: initial;
+  }
+  header {
+    position: relative;
+  }
+  #header_logo {
+    position: absolute;
+    left: 24px;
+    top: 0;
+  }
+  main {
+    height: calc(100vh - 120px);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+  }
+  .color {
+    position: relative;
+    height: initial;
+    width: 20%;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .area {
+    position: absolute;
+    width: 50px;
+    right: -25px;
+    height: 80vh;
+    top: 0;
+    z-index: 2;
+  }
+  .area:hover {
+    cursor: pointer;
+  }
+  .area:hover > .add_color {
+    display: block;
+  }
+  .add_color {
+    display: none;
+    position: absolute;
+    top: 250px;
+    right: 5px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: white;
+    transform: rotate(45deg);
+    z-index: 2;
+    text-align: center;
+  }
+  .last_area {
+    right: 0px;
+  }
+  .add_color i {
+    display: inline-block;
+    line-height: 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 4px;
+  }
+  .color_info {
+    align-items: center;
+  }
+  .color_info-name {
+    opacity: 0.6;
+    font-size: 11.2px;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+    line-height: 14px;
+    font-variation-settings: "wght" 600;
+    cursor: pointer;
+    margin-bottom: 64px;
+  }
+  .color_tools {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-bottom: 32px;
+  }
+  .color_tools i {
+    padding: 6px;
+    color: black;
+  }
+}
+@media screen and (min-width: 68rem) {
+  .order {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.7);
+  }
+}

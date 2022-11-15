@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 a {
   text-decoration: none;
   color: gray;
@@ -47,6 +51,9 @@ header {
   flex-direction: row;
   align-items: center;
   padding: 0 30px;
+}
+.order {
+  display: none;
 }
 #generate {
   width: 100px;
@@ -114,16 +121,6 @@ main {
   font-weight: 600;
   padding: 10px;
 }
-@media screen and (min-width: 56rem) {
-  .hidden {
-    display: initial;
-  }
-  header {
-    position: relative;
-  }
-  #header_logo {
-    position: absolute;
-    left: 24px;
-    top: 0;
-  }
+.add_color {
+  display: none;
 }
