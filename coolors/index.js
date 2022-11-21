@@ -31,6 +31,7 @@ function newPalette() {
     }
   });
 }
+newPalette();
 // Création aléatoire d'une nouvelle palette de couleurs au touch ou avec la barre d'espace
 btnGenerate.addEventListener("click", () => {
   newPalette();
@@ -40,14 +41,40 @@ document.addEventListener("keydown", function (event) {
     newPalette();
   }
 });
-// drag et drop des couleurs
-const divColors = document.querySelectorAll(".color");
 const moveColors = document.querySelectorAll(".fa-arrows-up-down");
 
-moveColors.forEach((elt) => {
-  elt.addEventListener("click", (e) => {
-    let id = e.target.getAttribute("data-index");
-    const divColor = document.querySelectorAll(`.color[data-index="${id}"]`);
-    console.log(divColor);
-  });
-});
+// drag et drop des couleurs
+const divColors = document.querySelectorAll(".color");
+let dragged, bgColor;
+
+for (let divColor of divColors) {
+  divColor.ondragstart = (e) => {
+    dragged = divColor;
+    bgColor = divColor.style.backgroundColor;
+    // On mémorise dans setData la valeur de la divColor de drag (départ)
+    e.dataTransfer.setData("text/plain", divColor.innerHTML);
+    divColor.classList.add("dragged");
+  };
+  divColor.ondragover = (e) => {
+    e.preventDefault();
+  };
+  divColor.ondragenter = () => {
+    divColor.classList.add("dropHover");
+  };
+  divColor.ondragleave = () => {
+    divColor.classList.remove("dropHover");
+  };
+  divColor.ondragend = () => {
+    divColor.classList.remove("dragged");
+  };
+  divColor.ondrop = (e) => {
+    // On attibut à dragger le contenu de la divColor de la zone de drop (arrivée)
+    dragged.style.backgroundColor = divColor.style.backgroundColor;
+    dragged.innerHTML = divColor.innerHTML;
+
+    // On attribut à divColor le contenu de la divColor de la zone de drag (départ)
+    divColor.innerHTML = e.dataTransfer.getData("text/plain");
+    divColor.style.backgroundColor = bgColor;
+    divColor.classList.remove("dropHover");
+  };
+}
