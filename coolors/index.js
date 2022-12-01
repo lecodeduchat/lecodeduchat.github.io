@@ -1,6 +1,7 @@
 "use strict";
+const main = document.querySelector("main");
 const btnGenerate = document.getElementById("generate");
-const colors = document.querySelectorAll(".color");
+let palette = [];
 
 function getRandomNumber(min, max) {
   let randomNumber = crypto.getRandomValues(new Uint32Array(1))[0];
@@ -13,8 +14,46 @@ function generateColor() {
   let color = [tabColors[num].name, tabColors[num].hex];
   return color;
 }
+function firstPalette() {
+  for (let i = 0; i < 5; i++) {
+    newColor();
+  }
+}
+function newColor() {
+  const color = generateColor();
+  let id = color[1].slice(1, 7);
+  const section = document.createElement("section");
+  section.classList.add("color");
+  section.draggable = true;
+  section.innerHTML = `
+        <div class="color_info">
+          <div class="color_info-hexa">${color[1]}</div>
+          <div class="color_info-name hidden">${color[0]}</div>
+        </div>
+        <div class="color_tools">
+          <i class="fa-solid fa-xmark delete" data-color="${id}"></i>
+          <i class="fa-solid fa-circle-half-stroke"></i>
+          <i class="fa-solid fa-table-cells"></i>
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-solid fa-arrows-up-down"></i>
+          <i class="fa-solid fa-copy"></i>
+          <i class="fa-solid fa-unlock"></i>
+        </div>
+        <div class="area">
+          <div class="add_color" data-color="${color[1]}">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+  `;
+  main.appendChild(section);
+  section.style.backgroundColor = color[1];
+  section.id = id;
+  palette.push(color);
+}
+
 function newPalette() {
-  let palette = [];
+  const colors = document.querySelectorAll(".color");
+  palette = [];
   colors.forEach((color) => {
     let colorInfoName = color.querySelector(".color_info-name");
     let colorInfoHexa = color.querySelector(".color_info-hexa");
@@ -31,7 +70,52 @@ function newPalette() {
     }
   });
 }
-newPalette();
+firstPalette();
+
+function deleteColor() {
+  let idColor = this.getAttribute("data-color");
+  const colors = document.querySelectorAll(".color");
+  colors.forEach((elt) => {
+    if (elt.id == idColor) {
+      elt.remove();
+    }
+  });
+  let c = `#${idColor}`;
+  let indexOf;
+  for (let i = 0; i < palette.length; i++) {
+    if (palette[i][1] == c) {
+      indexOf = i;
+    }
+  }
+  palette.splice(indexOf, 1);
+  updateGrid();
+}
+
+const deletes = document.querySelectorAll(".delete");
+deletes.forEach((elt) => {
+  elt.addEventListener("click", deleteColor);
+});
+
+// Création d'une couleur supplémentaire via le bouton addColor
+
+function addColor() {
+  console.log(this);
+
+  let colorBefore = this.getAttribute("data-color");
+  console.log(colorBefore);
+
+  newColor();
+  let newC = palette.pop();
+  console.log(palette, newC);
+}
+// addColor();
+
+const addColors = document.querySelectorAll(".addColor");
+
+addColors.forEach((elt) => {
+  elt.addEventListener("click", addColor);
+});
+
 // Création aléatoire d'une nouvelle palette de couleurs au touch ou avec la barre d'espace
 btnGenerate.addEventListener("click", () => {
   newPalette();
@@ -43,7 +127,14 @@ document.addEventListener("keydown", function (event) {
 });
 const moveColors = document.querySelectorAll(".fa-arrows-up-down");
 
-// drag et drop des couleurs
+// mise à jour du css grid après suppression ou ajout d'une couleur
+function updateGrid() {
+  let nb = palette.length;
+  main.style.gridTemplateColumns = `repeat(${nb} , 1fr)`;
+}
+
+// -------------------------------------------------------------------
+// ------------------  drag et drop des couleurs ---------------------
 const divColors = document.querySelectorAll(".color");
 let dragged, bgColor;
 
