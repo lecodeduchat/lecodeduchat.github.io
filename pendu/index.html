@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer type="module"></script>
+    <title>Jeu du pendu</title>
+  </head>
+  <body style="margin: 0px">
+    <ld-pendu></ld-pendu>
+    <template id="pendu">
+      <link rel="stylesheet" href="./pendu.css" />
+      <div class="pendu_container">
+        <div class="pendu_view">
+          <span class="gallows"></span>
+          <span class="gallows"></span>
+          <span class="gallows"></span>
+          <span class="gallows"></span>
+          <span class="pendu"></span>
+          <span class="pendu"></span>
+          <span class="pendu"></span>
+          <span class="pendu"></span>
+          <span class="pendu"></span>
+          <span class="pendu"></span>
+        </div>
+        <div class="pendu_word">
+          <span class="letter">M</span>
+          <span class="letter">O</span>
+          <span class="letter">T</span>
+        </div>
+        <div class="indice">
+          Indice le thème du mot est : <strong id="theme">thème</strong>
+        </div>
+        <div class="pendu_keyboard"></div>
+      </div>
+    </template>
+  </body>
+</html>
